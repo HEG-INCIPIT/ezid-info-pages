@@ -1,4 +1,5 @@
 {% extends "layouts/information.html" %}
+{% load layout_extras %}
 
 {% block title %}EZID Home{% endblock %}
 
@@ -29,4 +30,16 @@
 {% endblock %}
 {% block sidebar %}
 
+<h1>Learn More</h1>
+	{% rounded_borders %}
+		<ul class="linklist">
+			<li><a href="/ezid/home/why">Why EZID?</a></li>
+			<li><a href="/ezid/home/understanding">Understanding Identifiers</a></li>
+			<li><a href="/ezid/home/pricing">Pricing</a></li>
+			<li><a href="/ezid/home/documentation">Documentation</a></li>
+			<li><a href="/ezid/home/outreach">Outreach</a></li>
+			<li><a href="/ezid/home/community">The EZID Community</a></li>
+		</ul>
+	{% endrounded_borders %}
+	
 {% endblock %}

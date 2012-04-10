@@ -1,0 +1,246 @@
+{% extends "layouts/information.html" %}
+
+{% block title %}EZID Help{% endblock %}
+
+{% block main_column %}
+	<h1>EZID Help</h1>
+	
+	
+	<h2>My Account</h2>
+	<dl>
+		<dt>Set up an account.</dt> 
+		<dd>To set up an account with EZID, please visit the
+			<a href="/ezid/home/contact">contact us</a>page and send
+			an email inquiry.
+		</dd>
+		<dt>Edit account information</dt>
+		<dd>
+			Users with an EZID account can edit their name, address,
+			phone number, and password on the My Account page. Users can
+			also designate co-owners for identifiers in their account.
+		</dd>
+		<dt>What is co-ownership?</dt>
+		<dd>Co-ownership is when one EZID user account designates
+			another EZID user account as co-owner of the first account’s
+			identifiers. This gives the second EZID user account the right
+			to manage and edit detailed information about an identifier.  
+		</dd>
+	</dl>
+
+	<h2>Create IDs</h2>
+	<dl>
+		<dt>Simple create form vs. advanced create form.</dt>
+		<dd>In the simple create form, EZID users can create an
+			identifier and fill in a brief description of the object
+			being identified. In the advanced create form, EZID
+			users have the additional options of adding a custom
+			remainder to their identifier, the ability to delay
+			publishing of identifier, and also the capability to
+			select different ways of describing their objects.
+		</dd>
+		<dt>Which identifier should I choose?</dt>
+		<dd>
+			DOIs have a brand that is well established in the scholarly
+			publishing and archiving world. Use DOIs to register objects
+			under good long-term management. Researchers may choose a DOI
+			for materials being published.
+		</dd>
+		<dd>
+			ARKs have some additional levels of flexibility: they are
+			case-sensitive; they can distinguish between special characters
+			and adopt predictable behavior; they support suffix passthrough,
+			allowing one ARK registration to identify many thousands of
+			extended ARKS in order to represent the many parts of a
+			dataset; and they can be deleted. Researchers may choose
+			to use ARKs for unpublished materials associated with an
+			object that has been registered with a DOI. 
+		</dd>
+		<dt>Why should I describe my object?</dt>
+		<dd>
+			Adding descriptive metadata to an identifier can help
+			others find and cite your object in the future. Metadata
+			is information (data) about the object, such as the name
+			of the object's creator, the date of creation, the target
+			URL, the version of the object, its title, and so on. EZID
+			allows the user to enter metadata at the same time as an
+			identifier is requested. Associating metadata with identifiers
+			enables more sophisticated mechanisms for digital content
+			discovery and higher-level assurances of long-term persistence.
+		</dd>
+		<dt>What does it mean to publish an identifier?</dt>
+		<dd>
+			Publication of an identifier means making the identifier,
+			its target URL and associate metadata publicly available.
+		</dd>
+		<dt>Advanced create ID form</dt>
+		<dd>
+			Custom remainders should be unique and opaque. By opaque,
+			it is meant that the alphanumeric string has no meaning. EZID
+			strongly discourages placing brand strings in the remainder
+			because successor organizations do not often honor
+			previous brand and name assignments.
+		</dd>
+		<dd>
+			Because it is difficult to do this manually, it is recommended
+			that EZID generate new identifiers in order to guarantee that
+			they are unique and opaque.  
+		</dd>
+		<dt>Which citation profile should you use?</dt>
+		<dd>
+			DataCite Kernel:  when registering a DOI for a dataset,
+			the DataCite Kernel is required as a minimum set of metadata.
+			If a richer set of descriptive capability is desired, choose the
+			full DataCite Schema, which is documented here:
+			<a href="http://schema.datacite.org/">http://schema.datacite.org/</a>
+		</dd>
+		<dd>
+			Dublin Core:  the Dublin Core profile is provided for interoperability.
+		</dd>
+		<dd>
+			ERC (aka, Dublin Kernel): the Electronic  Resource Citation
+			(ERC) profile is the EZID UI default for ARKs. Metadata
+			features developed for the ARK resolver are aimed at records
+			stored with this format first. 
+		</dd>
+		<dd>
+			Full DataCite Schema: when registering a DOI for a dataset,
+			the DataCite Kernel is required as a minimum set of metadata.
+			If a richer set of descriptive capability is desired, choose
+			the full DataCite Schema, which is documented here:
+			<a href="http://schema.datacite.org/">http://schema.datacite.org/</a>
+		</dd>
+		<dt>How to use “name of set” field in description section?</dt>
+		<dd>
+			If you want to group your identifiers according to a particular
+			topic of collection name, assign a name of set to create this
+			grouping capability.
+		</dd>
+	</dl>
+
+	<h2>Manage IDs</h2>
+	<dl>
+		<dt>How to customize the “Manage IDs” browse list view?</dt>
+		<dd>
+			EZID users can browse all identifiers that they have
+			created by a browse list in the Manage ID section. They
+			can customize this list with informational fields that
+			are meaningful to them by clicking on the “Customize view”
+			link. Users can select up to 5 informational columns for
+			their list view.  We’ll need to check this when built!
+		</dd>
+		<dt>ID detail view</dt>
+		<dd>
+			EZID users can view detailed descriptive information
+			about identifiers that they have created. Users can
+			edit information that they have entered into EZID
+			to describe their object.
+		</dd>
+	</dl>
+	
+	<h2>Lookup IDs</h2>
+	<dl>
+		<dt>Instructions on how to enter identifier string to return results (exact string or partial match?)</dt>
+		<dd>
+			[Need content. Waiting to see how it works.]
+		</dd>
+	</dl>
+	
+	<h2>Admin for non-CDL administrators</h2>
+	<h3>Manage User Accounts</h3>
+	<dl>
+		<dt>How to create new users?</dl>
+		<dd>
+			For most new users, refer to the EZID Order
+			Form to get the new user’s desired account name.
+		</dd>
+		<dd>
+			If account name already exists, an error is displayed:
+			"Username already in use." The existing user account may
+			be for the Merritt, which shares the LDAP server.
+			If this is the same user, then select the username from
+			the existing LDAP user list and turn the account into an EZID
+			user. If there is uncertainty, recontact the user
+			to request a new user name.
+		</dd>
+		<dt>How to assign users to a group?</dt>
+		<dd>
+			Next, assign the user account to the appropriate
+			group based on the EZID Order Form.
+		</dd>
+		<dt>What is co-ownership?</dt>
+		<dd>
+			Administrators can designate a co-owner for any EZID
+			user account. Co-ownership means that EZID user account
+			A’s identifiers are co-owned by user account B. This is
+			not a two-way relationship. If a two-way relationship is
+			desired, the administrator will also have to establish user
+			account A as co-owner of user account B’s identifiers.
+		</dd>
+	</dl>
+	 
+	<h3>Manage Groups</h3>
+	<dl>
+		<dt>What is the purpose of Groups in EZID?</dt>
+		<dd>
+			The EZID notion of a group (or "owner group") is an
+			aggregation of account holders that collectively
+			inherits the identifiers owned by individuals in the group.
+			EZID uses groups in three ways. First, if an individual member
+			of a group is no longer active, for whatever reason, the
+			EZID group is obligated to maintain identifiers created by
+			its members, and to assist in identifying new owners as needed.
+		</dd>
+		<dd>
+			Second, the EZID group is also the mechanism by which
+			the EZID system controls the categories of identifiers
+			an individual member can make using EZID.
+		</dd>
+		<dd>
+			Lastly, the group record information is used for billing purposes.
+		</dd>
+		<dt>For a new group, refer to the EZID Order Form.</dt>
+		<dd>
+			By convention, the group name will either be the same as
+			the user account name (for all groups other than institution)
+			or it will have some relationship to it. For institution groups
+			that sponsor multiple user accounts, administrative practice
+			is to add a prefix derived from the group name to each user
+			account name. For example, a Group called abcdlibraries
+			represents a campus library that sponsors any and all
+			EZID users belonging to a university. The user accounts
+			assigned to this group might start with abcd_.
+		</dd>
+		<dt>What are shoulders?</dt>
+		<dd>
+			Persistent identifiers need to be globally unique.
+			To achieve this, two strategies work together:
+		</dd>
+		<dd>the set of starting number combinations (prefixes)
+			is carefully controlled and distributed; and
+		</dd>
+		<dd>
+			unique extensions can be added to the prefix to
+			extend the options for unique identifiers by vast
+			proportions. These extensions are called “shoulders.”
+		</dd>
+		<dd>
+			For more information about Identifiers, prefixes and
+			shoulders, please see:
+			<a href="https://confluence.ucop.edu/display/Curation/Identifier+Conventions">https://confluence.ucop.edu/display/Curation/Identifier+Conventions</a>
+		</dd>
+	</dl>
+	
+	<h2>Demo</h2>
+	<dl>
+		<dt>What is a test identifier?</dt>
+		<dd>
+			Users can try out the EZID functionality by creating
+			“test IDs.”  These identifiers will be valid for 2
+			weeks and can be used to try out features of the EZID website.
+		</dd>
+	</dl>
+
+{% endblock %}
+{% block sidebar %}
+
+{% endblock %}
