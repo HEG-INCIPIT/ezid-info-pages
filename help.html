@@ -10,18 +10,18 @@
 	<dl>
 		<dt>Set up an account.</dt> 
 		<dd>To set up an account with EZID, please visit the
-			<a href="/ezid/home/contact">contact us</a>page and send
-			an email inquiry.
+			<a href="/ezid/home/contact"> contact us</a> page and send
+			us an email inquiry.
 		</dd>
 		<dt>Edit account information</dt>
 		<dd>
-			Users with an EZID account can edit their name, address,
-			phone number, and password on the My Account page. Users can
-			also designate co-owners for identifiers in their account.
+			Once you have an EZID account, you can edit your name, address,
+			phone number, and password on the My Account page. You can
+			also designate a co-owner for the identifiers in your account.
 		</dd>
 		<dt>What is co-ownership?</dt>
 		<dd>Co-ownership is when one EZID user account designates
-			another EZID user account as co-owner of the first account’s
+			another EZID user account as co-owner of the first account's
 			identifiers. This gives the second EZID user account the right
 			to manage and edit detailed information about an identifier.  
 		</dd>
@@ -30,11 +30,10 @@
 	<h2>Create IDs</h2>
 	<dl>
 		<dt>Simple create form vs. advanced create form.</dt>
-		<dd>In the simple create form, EZID users can create an
+		<dd>In the simple create form, you can create an
 			identifier and fill in a brief description of the object
-			being identified. In the advanced create form, EZID
-			users have the additional options of adding a custom
-			remainder to their identifier, the ability to delay
+			being identified. In the advanced create form, you have the additional options of adding a custom
+			remainder (suffix) to the identifier, the ability to delay
 			publishing of identifier, and also the capability to
 			select different ways of describing their objects.
 		</dd>
@@ -48,24 +47,19 @@
 		<dd>
 			ARKs have some additional levels of flexibility: they are
 			case-sensitive; they can distinguish between special characters
-			and adopt predictable behavior; they support suffix passthrough,
-			allowing one ARK registration to identify many thousands of
-			extended ARKS in order to represent the many parts of a
-			dataset; and they can be deleted. Researchers may choose
-			to use ARKs for unpublished materials associated with an
+			and adopt predictable behavior; and they can be deleted. Researchers may choose
+			to use ARKs during the early stages of a research project and for unpublished materials associated with an
 			object that has been registered with a DOI. 
 		</dd>
-		<dt>Why should I describe my object?</dt>
+		<dt>Why should I describe my object with metadata?</dt>
 		<dd>
 			Adding descriptive metadata to an identifier can help
-			others find and cite your object in the future. Metadata
+			others find, cite and reuse your object in the future. Metadata
 			is information (data) about the object, such as the name
 			of the object's creator, the date of creation, the target
 			URL, the version of the object, its title, and so on. EZID
-			allows the user to enter metadata at the same time as an
-			identifier is requested. Associating metadata with identifiers
-			enables more sophisticated mechanisms for digital content
-			discovery and higher-level assurances of long-term persistence.
+			allows you to enter metadata at the same time you request the
+			identifier as well as later. 
 		</dd>
 		<dt>What does it mean to publish an identifier?</dt>
 		<dd>
@@ -74,7 +68,7 @@
 		</dd>
 		<dt>Advanced create ID form</dt>
 		<dd>
-			Custom remainders should be unique and opaque. By opaque,
+			Custom remainders (suffixes) should be unique and opaque. By opaque,
 			it is meant that the alphanumeric string has no meaning. EZID
 			strongly discourages placing brand strings in the remainder
 			because successor organizations do not often honor
@@ -85,7 +79,7 @@
 			that EZID generate new identifiers in order to guarantee that
 			they are unique and opaque.  
 		</dd>
-		<dt>Which citation profile should you use?</dt>
+		<dt>Which citation profile should I use?</dt>
 		<dd>
 			DataCite Kernel:  when registering a DOI for a dataset,
 			the DataCite Kernel is required as a minimum set of metadata.
@@ -107,135 +101,41 @@
 			the DataCite Kernel is required as a minimum set of metadata.
 			If a richer set of descriptive capability is desired, choose
 			the full DataCite Schema, which is documented here:
-			<a href="http://schema.datacite.org/">http://schema.datacite.org/</a>
-		</dd>
-		<dt>How to use “name of set” field in description section?</dt>
-		<dd>
-			If you want to group your identifiers according to a particular
-			topic of collection name, assign a name of set to create this
-			grouping capability.
+			<a href="http://schema.datacite.org/">http://schema.datacite.org/</a>. This must be done via the EZID <a href="/ezid/doc/apidoc.html">API</a>.
 		</dd>
 	</dl>
 
 	<h2>Manage IDs</h2>
 	<dl>
-		<dt>How to customize the “Manage IDs” browse list view?</dt>
+		<dt>How to customize the <i>Manage ID</i> browse list view?</dt>
 		<dd>
-			EZID users can browse all identifiers that they have
-			created by a browse list in the Manage ID section. They
-			can customize this list with informational fields that
-			are meaningful to them by clicking on the “Customize view”
-			link. Users can select up to 5 informational columns for
-			their list view.  We’ll need to check this when built!
+			You can browse all identifiers that you have
+			created by a browse list in the Manage ID section. You
+			can customize this list with informational fields of your choice by clicking on the <i>Customize view</i>
+			link. You may select up to 8 informational columns for the list view.
 		</dd>
 		<dt>ID detail view</dt>
 		<dd>
-			EZID users can view detailed descriptive information
-			about identifiers that they have created. Users can
-			edit information that they have entered into EZID
-			to describe their object.
+			You can view detailed descriptive information
+			about identifiers you have created. You'll also see a QR code for the URL version of the identifier. On this screen, you can
+			edit and add to the information you have entered into EZID to describe the object.
 		</dd>
 	</dl>
 	
 	<h2>Lookup IDs</h2>
 	<dl>
-		<dt>Instructions on how to enter identifier string to return results (exact string or partial match?)</dt>
+		<dt>Instructions on how to enter identifier string to return results.</dt>
 		<dd>
-			[Need content. Waiting to see how it works.]
+			In order to view the details about a known identifier, you must enter the complete string.
 		</dd>
 	</dl>
 	
-	<h2>Admin for non-CDL administrators</h2>
-	<h3>Manage User Accounts</h3>
-	<dl>
-		<dt>How to create new users?</dl>
-		<dd>
-			For most new users, refer to the EZID Order
-			Form to get the new user’s desired account name.
-		</dd>
-		<dd>
-			If account name already exists, an error is displayed:
-			"Username already in use." The existing user account may
-			be for the Merritt, which shares the LDAP server.
-			If this is the same user, then select the username from
-			the existing LDAP user list and turn the account into an EZID
-			user. If there is uncertainty, recontact the user
-			to request a new user name.
-		</dd>
-		<dt>How to assign users to a group?</dt>
-		<dd>
-			Next, assign the user account to the appropriate
-			group based on the EZID Order Form.
-		</dd>
-		<dt>What is co-ownership?</dt>
-		<dd>
-			Administrators can designate a co-owner for any EZID
-			user account. Co-ownership means that EZID user account
-			A’s identifiers are co-owned by user account B. This is
-			not a two-way relationship. If a two-way relationship is
-			desired, the administrator will also have to establish user
-			account A as co-owner of user account B’s identifiers.
-		</dd>
-	</dl>
-	 
-	<h3>Manage Groups</h3>
-	<dl>
-		<dt>What is the purpose of Groups in EZID?</dt>
-		<dd>
-			The EZID notion of a group (or "owner group") is an
-			aggregation of account holders that collectively
-			inherits the identifiers owned by individuals in the group.
-			EZID uses groups in three ways. First, if an individual member
-			of a group is no longer active, for whatever reason, the
-			EZID group is obligated to maintain identifiers created by
-			its members, and to assist in identifying new owners as needed.
-		</dd>
-		<dd>
-			Second, the EZID group is also the mechanism by which
-			the EZID system controls the categories of identifiers
-			an individual member can make using EZID.
-		</dd>
-		<dd>
-			Lastly, the group record information is used for billing purposes.
-		</dd>
-		<dt>For a new group, refer to the EZID Order Form.</dt>
-		<dd>
-			By convention, the group name will either be the same as
-			the user account name (for all groups other than institution)
-			or it will have some relationship to it. For institution groups
-			that sponsor multiple user accounts, administrative practice
-			is to add a prefix derived from the group name to each user
-			account name. For example, a Group called abcdlibraries
-			represents a campus library that sponsors any and all
-			EZID users belonging to a university. The user accounts
-			assigned to this group might start with abcd_.
-		</dd>
-		<dt>What are shoulders?</dt>
-		<dd>
-			Persistent identifiers need to be globally unique.
-			To achieve this, two strategies work together:
-		</dd>
-		<dd>the set of starting number combinations (prefixes)
-			is carefully controlled and distributed; and
-		</dd>
-		<dd>
-			unique extensions can be added to the prefix to
-			extend the options for unique identifiers by vast
-			proportions. These extensions are called “shoulders.”
-		</dd>
-		<dd>
-			For more information about Identifiers, prefixes and
-			shoulders, please see:
-			<a href="https://confluence.ucop.edu/display/Curation/Identifier+Conventions">https://confluence.ucop.edu/display/Curation/Identifier+Conventions</a>
-		</dd>
-	</dl>
-	
-	<h2>Demo</h2>
+	<h2>Free Trial</h2>
 	<dl>
 		<dt>What is a test identifier?</dt>
 		<dd>
-			Users can try out the EZID functionality by creating
-			“test IDs.”  These identifiers will be valid for 2
+			Anyone can try out the EZID functionality without an account by creating
+			<i>test IDs.</i> These identifiers will be valid for 2
 			weeks and can be used to try out features of the EZID website.
 		</dd>
 	</dl>
