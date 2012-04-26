@@ -4,7 +4,7 @@
 {% block title %}EZID Home{% endblock %}
 
 {% block main_column %}
-  <h1>EZID (easy-eye-dee) makes it easy to create and manage unique,
+  <h1>EZID (easy-eye-dee) makes it easy to manage unique,
     long-term identifiers.</h1>
   <ul>
     <li>
@@ -15,7 +15,7 @@
       You can also store citation metadata with identifiers to help others discover your objects and help you maintain the identifiers. Several citation formats are possible.
     </li>
 		<li>
-		EZID also provides you with a QR code for every identifier. This comes in handy for using in poster sessions, promotional materials about your research, and anywhere else you don't have space to reference your object fully.
+			EZID also provides you with a QR code for every identifier. This comes in handy for using in poster sessions, promotional materials about your research, and anywhere else you don't have space to reference your object fully.
 		</li>
     <li>
       EZID supports a number of persistent identifier technologies,
@@ -25,21 +25,18 @@
   </ul>
   
   <p>
-    EZID also has a <a href="/ezid/doc/apidoc.html">programming interface</a>. You need a login account for full use of EZID, but you can <a href="/ezid/lookup">look up</a> any existing identifier without an account. And, you can <a href="/ezid/demo/simple">try out EZID</a> anytime! Once you've seen how it works, please <a href="/ezid/home/contact">contact us</a> for more information about getting an account.
+    EZID also has a <a href="/ezid/doc/apidoc.html">programming interface</a>.
+    You need a login account for full use of EZID, but you can <a href="/ezid/lookup">look up</a>
+    any existing identifier without an account. And, you can <a href="/ezid/demo/simple">try out EZID</a>
+    anytime! Once you've seen how it works, please <a href="/ezid/home/contact">contact us</a>
+    for more information about getting an account.
   </p>
 {% endblock %}
 {% block sidebar %}
-
-<h1>Learn More</h1>
-	{% rounded_borders %}
-		<ul class="linklist">
-			<li><a href="/ezid/home/why">Why EZID?</a></li>
-			<li><a href="/ezid/home/understanding">Understanding Identifiers</a></li>
-			<li><a href="/ezid/home/pricing">Pricing</a></li>
-			<li><a href="/ezid/home/documentation">Documentation</a></li>
-			<li><a href="/ezid/home/outreach">Outreach</a></li>
-			<li><a href="/ezid/home/community">Who's Using EZID?</a></li>
-		</ul>
-	{% endrounded_borders %}
-	
+	<div style="text-align:center;">
+		<img src="https://chart.googleapis.com/chart?chs=120x120&cht=qr&chld=L|0&chl={{ ezid_home_url|urlencode }}"
+  		   alt="QR Code for EZID" title="QR Code for EZID" /><br/>
+  	<i>QR code for EZID.</i><br/><br/>
+  	EZID provides a QR for each identifier it creates.
+ 	</div>
 {% endblock %}
