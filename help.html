@@ -66,7 +66,7 @@
 <li>Publisher (The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource.)</li>
 <li>PublicationYear (The year when the data was or will be made publicly available.)</li>
 </ul>
-		<dd>If the completion of any of these fields presents a difficulty, use the following standard (machine-recognizable) codes. However, we recommend that you review the resulting effect on any citation created from the metadata provided.</dd>
+		<dd>If the completion of any of these fields presents a difficulty, use the following standard (machine-recognizable) codes. However, we recommend that you review the resulting effect on the sample citation created from the metadata provided. This is visible on the Manage page.</dd>
 <ul>
 <li>(:unac) temporarily inaccessible</li>
 <li>(:unal) unallowed, suppressed intentionally</li>
@@ -90,7 +90,7 @@ An additional piece of metadata is not required, but is highly desirable and a b
 			Publication of an identifier means making the identifier,
 			its target URL and associate metadata publicly available.
 		</dd>
-		<dt>Advanced create identifier form</dt>
+		<dt><b>Advanced create identifier form</b></dt>
 		<dd>
 			Custom remainders (suffixes) should be unique and opaque. By opaque,
 			it is meant that the alphanumeric string has no meaning. EZID
@@ -127,6 +127,9 @@ An additional piece of metadata is not required, but is highly desirable and a b
 			the full DataCite Schema, which is documented here:
 			<a href="http://schema.datacite.org/">http://schema.datacite.org/</a>. This must be done via the EZID <a href="/ezid/doc/apidoc.html">API</a>.
 		</dd>
+		<dt>What is Harvesting and Indexing?</dt>
+		<dd>
+		Your choice of on or off in the Harvesting/Indexing field pertains to making the metadata available for harvesting and/or indexing. This refers to inclusion in DataCite's Metadata Search store (MDS), which is accessible via an OAI-PMH interface, as well as EZID's metadata store. Third party indexers may access the metadata in these ways. If you choose "on," it does not guarantee that the metadata will be harvested or indexed, but if you choose "off," it removes the possibility. The default setting is "on."</dd>
 	</dl>
 
 	<h2>Manage IDs</h2>
