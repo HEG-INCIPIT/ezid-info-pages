@@ -1,3 +1,4 @@
+ {% load layout_extras %}
  <div id="remainder_guidelines" class="help_window">
 	<h1>About custom remainders</h1>
 	<p>
@@ -40,3 +41,54 @@
 	</p>
 </div>
 
+<div id="datacite_creator_help" class="help_window">
+	<h1>Unable to enter a creator?</h1>
+	<p>
+		A creator value is required in the datacite profile.
+		If one is unavailable, we recommend using one of the following
+		standard machine-recognizable codes.
+		<strong>Selecting the code from the list below will automatically
+		insert it in the form for you.</strong>
+	</p>
+	
+	{% unavailable_codes "datacite.creator" %}
+</div>
+
+<div id="datacite_title_help" class="help_window">
+	<h1>Unable to enter a title?</h1>
+	<p>
+		A title value is required in the datacite profile.
+		If one is unavailable, we recommend using one of the following
+		standard machine-recognizable codes.
+		<strong>Selecting the code from the list below will automatically
+		insert it in the form for you.</strong>
+	</p>
+	
+	{% unavailable_codes "datacite.title" %}
+</div>
+
+<div id="datacite_publisher_help" class="help_window">
+	<h1>Unable to enter a publisher?</h1>
+	<p>
+		A publisher value is required in the datacite profile.
+		If one is unavailable, we recommend using one of the following
+		standard machine-recognizable codes.
+		<strong>Selecting the code from the list below will automatically
+		insert it in the form for you.</strong>
+	</p>
+	
+	{% unavailable_codes "datacite.publisher" %}
+</div>
+
+<div id="datacite_publicationyear_help" class="help_window">
+	<h1>Unable to enter a publication year?</h1>
+	<p>
+		A 4-digit publication year value is required in the datacite profile.
+		If one is unavailable, we recommend using one of the following
+		standard machine-recognizable codes.
+		<strong>Selecting the code from the list below will automatically
+		insert it in the form for you.</strong>
+	</p>
+	
+	{% unavailable_codes "datacite.publicationyear" %}
+</div>
