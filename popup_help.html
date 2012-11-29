@@ -1,4 +1,45 @@
- {% load layout_extras %}
+<script type="text/javascript">
+  /* these javascript methods replace some
+   * django template tags since it is hard to keep
+   * the two code branches (info pages and ezid) in sync
+   * so this should make maintenance easier and without
+   * the same dependency problems.
+   */
+  
+   function htmlEscape(str) {
+    return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+	}
+
+	function unavailable_codes(for_field){
+  	var items = [ ["unac", "temporarily inaccessible"],
+            ["unal", "unallowed, suppressed intentionally"],
+            ["unap", "not applicable, makes no sense"],
+            ["unas", "value unassigned (e.g., Untitled)"],
+            ["unav", "value unavailable, possibly unknown"],
+            ["unkn", "known to be unknown (e.g., Anonymous, Inconnue)"],
+            ["none", "never had a value, never will"],
+            ["null", "explicitly and meaningfully empty"],
+            ["tba", "to be assigned or announced later"],
+            ["etal", "too numerous to list (et alia)"],
+            ["at", "the real value is at the given URL or identifier"] ];
+   	var outstr = ""
+   	
+   	outstr += "<ul>\n";
+   	for (var i=0;i<items.length;i++){
+   		outstr += "<li><a href=\"#" + htmlEscape(items[i][0]) +
+   			"_" + for_field + "\" name=\"code_insert_link\">" +
+        htmlEscape("(:" + items[i][0] + ")" ) + "</a> " + htmlEscape(items[i][1]) + "</li>";
+   	}
+   	outstr += "</ul>"
+   	document.write(outstr)
+  }
+	
+</script>
  <div id="remainder_guidelines" class="help_window">
 	<h1>About custom remainders</h1>
 	<p>
@@ -51,7 +92,8 @@
 		insert it in the form for you.</strong>
 	</p>
 	
-	{% unavailable_codes "datacite.creator" %}
+	<script type="text/javascript">unavailable_codes("datacite.creator");</script>
+	{# unavailable_codes "datacite.creator" #}
 </div>
 
 <div id="datacite_title_help" class="help_window">
@@ -64,7 +106,8 @@
 		insert it in the form for you.</strong>
 	</p>
 	
-	{% unavailable_codes "datacite.title" %}
+	<script type="text/javascript">unavailable_codes("datacite.title");</script>
+	{# unavailable_codes "datacite.title" #}
 </div>
 
 <div id="datacite_publisher_help" class="help_window">
@@ -76,8 +119,8 @@
 		<strong>Selecting the code from the list below will automatically
 		insert it in the form for you.</strong>
 	</p>
-	
-	{% unavailable_codes "datacite.publisher" %}
+	<script type="text/javascript">unavailable_codes("datacite.publisher");</script>
+	{# unavailable_codes "datacite.publisher" #}
 </div>
 
 <div id="datacite_publicationyear_help" class="help_window">
@@ -89,8 +132,8 @@
 		<strong>Selecting the code from the list below will automatically
 		insert it in the form for you.</strong>
 	</p>
-	
-	{% unavailable_codes "datacite.publicationyear" %}
+	<script type="text/javascript">unavailable_codes("datacite.publicationyear");</script>
+	{# unavailable_codes "datacite.publicationyear" #}
 </div>
 
 <div id="export_help" class="help_window">
