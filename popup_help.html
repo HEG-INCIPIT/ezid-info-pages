@@ -57,12 +57,36 @@
 </div>
 
 <div id="public_id_help" class="help_window">
-	<h1>About identifier publication</h1>
+	<h1>Status</h1>
 	<p>
-		Publication of an identifier means making the identifier,
-		its target URL and associate metadata publicly available.
+		<strong>public</strong>: the identifier is viewable by anyone.
+	</p>
+	
+	<p>
+		<strong>reserved</strong>: the identifier is known only to EZID. May be used
+		to reserve an identifier name within EZID without advertising
+		the identifier's existence to resolvers and other external services. May be deleted.
+	</p>
+	
+	<p>
+		<strong>unavailable</strong>: The identifier is public, but only insofar as it
+		redirects to an EZID-provided "tombstone" page, displaying the identifier's
+		citation metadata and the reason for the object's unavailability.
 	</p>
 </div>
+
+
+
+<div id="unavail_reason_help" class="help_window">
+	<h1>Reason for Unavailability</h1>
+	<p>
+		The reason you supply will appear on the identifier's manage page,
+		through the API, and on an EZID-provided &quot;tombstone&quot; page
+		(an HTML page that displays the identifier's citation metadata and
+		the reason for the object's unavailability) regardless of its target URL.
+	</p>
+</div>
+
 
 <div id="coowners_help" class="help_window">
 	<h1>About co-ownership</h1>
