@@ -1,8 +1,8 @@
 <div id="dcxml_creators_help" class="help_window">
-	<h1>About creators</h1>
+	<h1>Creator</h1>
 	<p>
-		The main researchers involved in producing the data, or the
-		authors of the publication, in
+		The main researcher involved in producing the data, or the
+		author of the publication, in
 		priority order.
 	</p>
 	
@@ -28,7 +28,7 @@
 		<dt>Identifier Scheme</dt>
 		<dd>The name of the name identifier scheme.</dd>
 		<dd>
-			If Identifier is used, Identifier Scheme is mandatory.
+			If identifier is used, identifier scheme is mandatory.
 			Examples: ORCID12, ISNI13
 		</dd>
 		
@@ -42,7 +42,7 @@
 
 
 <div id="dcxml_titles_help" class="help_window">
-	<h1>About titles</h1>
+	<h1>Title</h1>
 	<p>
 		A name or title by which a resource is known. 
 	</p>
@@ -51,7 +51,7 @@
 
 
 <div id="dcxml_subjects_help" class="help_window">
-	<h1>About subjects</h1>
+	<h1>Subject</h1>
 	<p>
 		Subject, keyword, classification code, or key phrase describing the resource.
 	</p>
@@ -65,7 +65,7 @@
 		</dd>
 		
 		<dt>Scheme URI</dt>
-		<dd>The Scheme URI of the subject identifier scheme.</dd>
+		<dd>The scheme URI of the subject identifier scheme.</dd>
 		<dd>Examples: http://id.loc.gov/authorities/subjects; http://dewey.info/</dd>
 	</dl>
 </div>
@@ -73,7 +73,7 @@
 
 
 <div id="dcxml_contributors_help" class="help_window">
-	<h1>About contributors</h1>
+	<h1>Contributor</h1>
 	<p>
 		The institution or person responsible for collecting,
 		managing, distributing, or otherwise contributing to the
@@ -84,7 +84,7 @@
 		<dt>Name</dt>
 		<dd>The name of the contributor.</dd>
 		<dd>
-			If Contributor is used, then Contributor Name is mandatory.
+			If contributor is used, then name is mandatory.
 			Examples: Patel, Emily; Doe, John<br/><br/>
 
 			The personal name format may be: family, given. Non‐roman
@@ -106,7 +106,7 @@
 			The name of the name identifier scheme.
 		</dd>
 		<dd>
-			If Name Identifier is used, Name Identifier Scheme is
+			If name identifier is used, name identifier scheme is
 			mandatory. Examples: ORCID15, ISNI16
 		</dd>
 		
@@ -126,9 +126,9 @@
 
 
 <div id="dcxml_dates_help" class="help_window">
-	<h1>About dates</h1>
+	<h1>Date</h1>
 	<p>
-		Different dates relevant to the work. 
+		Date relevant to the work. 
 	</p>
 	<p>
 		YYYY,YYYY‐MM‐DD, YYYY‐MM‐DDThh:mm:ssTZD or any
@@ -140,20 +140,20 @@
 	<dl>
 		<dt>Date Type</dt>
 		<dd>The type of date.</dd>
-		<dd>If Date is used, Date Type is mandatory.</dd>
+		<dd>If date is used, date type is mandatory.</dd>
 	</dl>
 </div>
 
 
 
 <div id="dcxml_alt_ids_help" class="help_window">
-	<h1>About alternate identifiers</h1>
+	<h1>Alternate Identifier</h1>
 	<p>
-		An identifier or identifiers other than the primary Identifier applied
+		An identifier or identifiers other than the primary identifier applied
 		to the resource being registered. This may be any alphanumeric
 		string which is unique within its domain of issue. May be used for
-		local identifiers. Alternate Identifier should be used for another
-		identifier of the same instance (same location,same file). 
+		local identifiers. Alternate identifier should be used for another
+		identifier of the same instance (same location, same file). 
 	</p>
 	
 	<p>
@@ -163,8 +163,8 @@
 	<dl>
 		<dt>Identifier Type</dt>
 		<dd>
-			The type of the Alternate Identifier. If AlternateIdentifier is used,
-			Identifier Type is mandatory.
+			The type of the alternate identifier. If alternate identifier is used,
+			identifier type is mandatory.
 		</dd>
 		
 	</dl>
@@ -175,62 +175,115 @@
 
 
 <div id="dcxml_rel_ids_help" class="help_window">
-	<h1>Related IDs</h1>
+	<h1>Related Identifier</h1>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Proin tellus ligula, tincidunt eu orci eget, lacinia
-		posuere felis. Duis interdum facilisis convallis. Proin
-		auctor elit nisi, a rutrum orci imperdiet quis. Integer
-		et venenatis turpis. Vestibulum justo nibh, dignissim
-		in lorem fringilla, eleifend ultricies magna. Sed lacinia
-		gravida dignissim. Praesent lobortis euismod augue eu rutrum. 
+		Identifier of related resources. Must be globally unique. 
 	</p>
+	
+	<dl>
+		<dt>Identifier Type</dt>
+		<dd>The type of the related identifier</dd>
+		<dd>If a related identifier is used, identifier type is mandatory.</dd>
+		
+		<dt>Relation Type</dt>
+		<dd>
+			Description of the relationship of the resource being registered (A)
+			and the related resource (B).
+		</dd>
+		<dd>
+			If a related identifier is used, relation type is mandatory.
+		</dd>
+	</dl>
 </div>
 
 
 
 
 <div id="dcxml_rights_help" class="help_window">
-	<h1>About rights</h1>
+	<h1>Rights</h1>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Proin tellus ligula, tincidunt eu orci eget, lacinia
-		posuere felis. Duis interdum facilisis convallis. Proin
-		auctor elit nisi, a rutrum orci imperdiet quis. Integer
-		et venenatis turpis. Vestibulum justo nibh, dignissim
-		in lorem fringilla, eleifend ultricies magna. Sed lacinia
-		gravida dignissim. Praesent lobortis euismod augue eu rutrum. 
+		Any rights information for this resource. 
 	</p>
+	
+	<dl>
+		<dt>Rights</dt>
+		<dd>
+			Provide a rights management statement for the resource or
+			reference a service providing such information. Include
+			embargo information if applicable.
+		</dd>
+		<dd>
+			Use the complete title of a license and include version
+			information if applicable. Example: Creative Commons 
+			Attribution 3.0 Germany License
+		</dd>
+		
+		<dt>URI</dt>
+		<dd>The URI of the license.</dd>
+		<dd>Example: http://creativecommons.org/licenses/by/3.0/de/deed.en</dd>
+	</dl>
 </div>
 
 
 
 
 <div id="dcxml_descriptions_help" class="help_window">
-	<h1>About descriptions</h1>
+	<h1>Description</h1>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Proin tellus ligula, tincidunt eu orci eget, lacinia
-		posuere felis. Duis interdum facilisis convallis. Proin
-		auctor elit nisi, a rutrum orci imperdiet quis. Integer
-		et venenatis turpis. Vestibulum justo nibh, dignissim
-		in lorem fringilla, eleifend ultricies magna. Sed lacinia
-		gravida dignissim. Praesent lobortis euismod augue eu rutrum. 
+		All additional information that does not fit in any of the other
+		categories. May be used for technical information.
 	</p>
+	
+	<dl>
+		<dt>Description</dt>
+		<dd>
+			It is best practice to supply a description.
+		</dd>
+		
+		<dt>Type</dt>
+		<dd>
+			The type of the description.
+		</dd>
+		
+		<dd>
+			If description is used, type is mandatory.
+		</dd>
+	</dl>
 </div>
 
 
 
 
 <div id="dcxml_geolocations_help" class="help_window">
-	<h1>About geolocations</h1>
+	<h1>Geolocation</h1>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		Proin tellus ligula, tincidunt eu orci eget, lacinia
-		posuere felis. Duis interdum facilisis convallis. Proin
-		auctor elit nisi, a rutrum orci imperdiet quis. Integer
-		et venenatis turpis. Vestibulum justo nibh, dignissim
-		in lorem fringilla, eleifend ultricies magna. Sed lacinia
-		gravida dignissim. Praesent lobortis euismod augue eu rutrum. 
+		Spatial region or named place where the data was gathered or
+		about which the data is focused. 
 	</p>
+	
+	<p>
+		Repeat this property to indicate several different locations.
+	</p>
+	
+	<dl>
+		<dt>Point</dt>
+		<dd>A point location in space.</dd>
+		<dd>
+			A point contains a single latitude‐longitude pair,
+			separated by whitespace. Example: 31.233-67.302
+		</dd>
+		
+		<dt>Box</dt>
+		<dd>The spatial limits of a place.</dd>
+		<dd>
+			A box contains two white space separated
+			latitude‐longitude pairs, with each pair
+			separated by whitespace. The first pair is the lower corner,
+			the second is the upper corner. Example:
+			42.893‐71.032 41.090‐68.211
+		</dd>
+		
+		<dt>Place</dt>
+		<dd>Description of a geographic location.</dd>
+	</dl>
 </div>
