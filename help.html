@@ -41,7 +41,7 @@
 		<dd>
 			DOIs have a brand that is well established in the scholarly
 			publishing and archiving world. Use DOIs to register objects
-			under good long-term management. Researchers may choose a DOI
+			under good long-term management. DOIs must be accompanied by metadata that conforms to the DataCite Metadata Standard (http://schema.datacite.org/). Researchers may choose a DOI
 			for materials being published.
 		</dd>
 		<dd>
@@ -59,7 +59,7 @@
 			of the object's creator, the date of creation, the target
 			URL, the version of the object, its title, and so on. EZID
 			allows you to enter metadata at the same time you request the
-			identifier as well as later. If you are creating a DOI, you are required to supply a minimum set of citation metadata specified by DataCite:</dd>
+			identifier as well as later. If you are creating a DOI, you are required to supply a minimum set of citation metadata specified by DataCite. Clients who wish to enhance the prospects that their metadata will be found, cited and linked to original research are strongly encouraged to submit the Recommended as well as Mandatory set of properties when requesting DOIs.</dd>
 <ul>
 <li>Creator (The main researchers involved in producing the data, or the authors of the publication)</li>
 <li>Title (A name or title by which a resource is known. Should distinguish the resource from others.)</li>
@@ -82,9 +82,26 @@
 </ul>
 
 An additional piece of metadata is not required, but is highly desirable and a best practice. That is:
-<ul><li>ResourceType (The general type of a resource: Collection, Dataset, Event, Film, Image, InteractiveResource, Model, PhysicalObject, Service, Software, Sound, or Text)</li></ul> 
+<ul><li>ResourceType (the general type of a resource). The options are as follows:</li></ul> 
 </dt>
-		
+<table><tr><td>Option</td><td>Description</td><td>Usage Notes</td><tr/>
+<tr><td>Audiovisual</td><td>A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound.</td><td>May be used for films, video, etc, Ex: <a href="http://data.datacite.org/10.7794/USR3225/ARC.F/0000001">http://data.datacite.org/10.7794/USR3225/ARC.F/0000001</a></td></tr>
+<tr><td>Collection</td><td>An aggregation of resources of various types. If a collection exists of a single type, use the single type to describe it.</td><td>A collection of samples, or various files making up a report. Ex: <a href="http://data.datacite.org/10.5284/1001038">http://data.datacite.org/10.5284/1001038</a></td></tr>
+<tr><td>Dataset</td><td>Data encoded in a defined structure.</td><td>Data file or files, Ex: <a href="http://data.datacite.org/10.4231/D39Z90B9T">http://data.datacite.org/10.4231/D39Z90B9T</a></td></tr>
+<tr><td>Event</td><td>A non-persistent, time-based occurrence.</td><td>Descriptive information and/or content that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event such as a webcast or convention.. Ex: <a href="http://data.datacite.org/10.7269/P3RN35SZ">http://data.datacite.org/10.7269/P3RN35SZ</a></td></tr>
+<tr><td>Image</td><td>A visual representation other than text.</td><td>Digitized or born digital images, drawings or photographs. Ex: <a href="http://data.datacite.org/10.5060/D4RN35SD">http://data.datacite.org/10.5060/D4RN35SD</a></td></tr>
+<tr><td>InteractiveResource</td><td>A resource requiring interaction from the user to be understood, executed, or experienced</td><td>Training modules, files that require use of a viewer (e.g., Flash), or query/response portals. Ex: <a href="http://data.datacite.org/10.7269/P3TB14TR">http://data.datacite.org/10.7269/P3TB14TR</a></td></tr>
+<tr><td>Model</td><td>An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes.</td><td>Modelled descriptions of, for example, different aspects of languages or a molecular biology reaction chain.</td></tr>
+<tr><td>PhysicalObject</td><td>An inanimate, three-dimensional object or substance.</td><td>Artifacts, specimens.
+Ex: <a href="http://data.datacite.org/10.7299/X78052RB">http://data.datacite.org/10.7299/X78052RB</a></td></tr>
+<tr><td>Service</td><td>A system that provides one or more functions of value to the end-user.</td><td>Data management service, authentication service, or photocopying service.</td></tr>
+<tr><td>Software</td><td>A computer program in source code (text) or compiled form.</td><td>Software supporting research. Ex: <a href="http://data.datacite.org/10.5524/100046">http://data.datacite.org/10.5524/100046</a></td></tr>
+<tr><td>Sound</td><td>A resource primarily intended to be heard.</td><td>Audio recording. Ex: <a href="http://data.datacite.org/10.4231/3DZVR.1288284313124">http://data.datacite.org/10.4231/3DZVR.1288284313124</a></td></tr>
+<tr><td>Text</td><td>A resource consisting primarily of words for reading.</td><td>Grey literature, lab notes, accompanying materials.
+Ex: <a href="http://data.datacite.org/10.5682/9786065914018">http://data.datacite.org/10.5682/9786065914018</a></td></tr>
+<tr><td>Workflow</td><td>A structured series of steps which can be executed to produce a final outcome, allowing users a means to specify and enact their work in a more reproducible manner.</td><td>Computational workflows involving sequential operations made on data by wrapped software and may be specified in a format belonging to a workflow management system, such as Taverna (<a href="http://www.taverna.org.uk/">http://www.taverna.org.uk/</a>).</td></tr>
+<tr><td>Other</td><td>If selected, supply a value for Resource Type Description.</td><td>NA</td></tr></table
+		<h2/>
 		<dt>What does it mean to publish an identifier?</dt>
 		<dd>
 			Publication of an identifier means making the identifier,
