@@ -3,6 +3,20 @@
 {% block title %}EZID Help{% endblock %}
 
 {% block main_column %}
+
+	<style>
+		table {
+			width: 100%;
+			table-layout:fixed;
+		}
+		
+		table.info td, table.info th{
+			word-wrap:break-word;
+			word-break; break-all;
+			vertical-align: top;
+		}
+	</style>
+
 	<h1>EZID Help</h1>
 	
 	
@@ -41,7 +55,8 @@
 		<dd>
 			DOIs have a brand that is well established in the scholarly
 			publishing and archiving world. Use DOIs to register objects
-			under good long-term management. DOIs must be accompanied by metadata that conforms to the DataCite Metadata Standard (http://schema.datacite.org/). Researchers may choose a DOI
+			under good long-term management. DOIs must be accompanied by metadata
+			that conforms to the DataCite Metadata Standard (http://schema.datacite.org/). Researchers may choose a DOI
 			for materials being published.
 		</dd>
 		<dd>
@@ -59,77 +74,183 @@
 			of the object's creator, the date of creation, the target
 			URL, the version of the object, its title, and so on. EZID
 			allows you to enter metadata at the same time you request the
-			identifier as well as later. If you are creating a DOI, you are required to supply a minimum set of citation metadata specified by DataCite. Clients who wish to enhance the prospects that their metadata will be found, cited and linked to original research are strongly encouraged to submit the Recommended as well as Mandatory set of properties when requesting DOIs.</dd>
-<ul>
-<li>Creator (The main researchers involved in producing the data, or the authors of the publication)</li>
-<li>Title (A name or title by which a resource is known. Should distinguish the resource from others.)</li>
-<li>Publisher (The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the resource.)</li>
-<li>PublicationYear (The year when the data was or will be made publicly available.)</li>
-</ul>
-		<dd>If the completion of any of these fields presents a difficulty, use the following standard (machine-recognizable) codes. However, we recommend that you review the resulting effect on the sample citation created from the metadata provided. This is visible on the Manage page.</dd>
-<ul>
-<li>(:unac) temporarily inaccessible</li>
-<li>(:unal) unallowed, suppressed intentionally</li>
-<li>(:unap) not applicable, makes no sense</li>
-<li>(:unas) value unassigned (e.g., Untitled)</li>
-<li>(:unav) value unavailable, possibly unknown</li>
-<li>(:unkn) known to be unknown (e.g., Anonymous, Inconnue)</li>
-<li>(:none) never had a value, never will</li>
-<li>(:null) explicitly and meaningfully empty</li>
-<li>(:tba) to be assigned or announced later</li>
-<li>(:etal) too numerous to list (et alia).</li>
-<li>(:at) the real value is at the given URL or identifier.</li>
-</ul>
+			identifier as well as later. If you are creating a DOI, you
+			are required to supply a minimum set of citation metadata specified
+			by DataCite. Clients who wish to enhance the prospects that their
+			metadata will be found, cited and linked to original research
+			are strongly encouraged to submit the Recommended as well
+			as Mandatory set of properties when requesting DOIs.
+		</dd>
 
-An additional piece of metadata is not required, but is highly desirable and a best practice. That is:
-<ul><li>ResourceType (the general type of a resource). The options are as follows:</li></ul> 
-</dt>
+		<ul>
+			<li>Creator (The main researchers involved in producing the data, or the authors of the publication)</li>
+			<li>Title (A name or title by which a resource is known. Should distinguish the resource from others.)</li>
+			<li>
+				Publisher (The name of the entity that holds, archives,
+				publishes, prints, distributes, releases, issues, or produces the resource.)
+			</li>
+			<li>PublicationYear (The year when the data was or will be made publicly available.)</li>
+		</ul>
+		
+		<dd>
+			If the completion of any of these fields presents a difficulty,
+			use the following standard (machine-recognizable) codes. However, we
+			recommend that you review the resulting effect on the sample citation
+			created from the metadata provided. This is visible on the Manage page.
+		</dd>
+		<ul>
+			<li>(:unac) temporarily inaccessible</li>
+			<li>(:unal) unallowed, suppressed intentionally</li>
+			<li>(:unap) not applicable, makes no sense</li>
+			<li>(:unas) value unassigned (e.g., Untitled)</li>
+			<li>(:unav) value unavailable, possibly unknown</li>
+			<li>(:unkn) known to be unknown (e.g., Anonymous, Inconnue)</li>
+			<li>(:none) never had a value, never will</li>
+			<li>(:null) explicitly and meaningfully empty</li>
+			<li>(:tba) to be assigned or announced later</li>
+			<li>(:etal) too numerous to list (et alia).</li>
+			<li>(:at) the real value is at the given URL or identifier.</li>
+		</ul>
 
-<table class="info">
+		<dd>
+			An additional piece of metadata is not required, but
+			is highly desirable and a best practice. That is:
+			<ul><li>ResourceType (the general type of a resource). The options are as follows:</li></ul> 
+
+			<table class="info">
+			
+				<tr class="headrow">
+					<th style="width:20%;">Option</th>
+					<th style="width:35%;">Description</th>
+					<th>Usage Notes</th>
+				</tr>
+				<tr class="row2">
+					<td>Audiovisual</td>
+					<td>A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound.</td>
+					<td>
+						May be used for films, video, etc, Ex:
+						<a href="http://data.datacite.org/10.7794/USR3225/ARC.F/0000001">http://data.datacite.org/10.7794/USR3225/ARC.F/0000001</a>
+					</td>
+				</tr>
+		
+				<tr class="row1">
+					<td>Collection</td>
+					<td>An aggregation of resources of various types. If a collection exists of a single type, use the single type to describe it.</td>
+					<td>
+						A collection of samples, or various files making up a report.
+						Ex: <a href="http://data.datacite.org/10.5284/1001038">http://data.datacite.org/10.5284/1001038</a>
+					</td>
+				</tr>
+		
+				<tr class="row2">
+					<td>Dataset</td>
+					<td>Data encoded in a defined structure.</td>
+					<td>Data file or files, Ex: <a href="http://data.datacite.org/10.4231/D39Z90B9T">http://data.datacite.org/10.4231/D39Z90B9T</a></td>
+				</tr>
+		
+				<tr class="row1">
+					<td>Event</td>
+					<td>A non-persistent, time-based occurrence.</td>
+					<td>
+						Descriptive information and/or content that is the basis for
+						discovery of the purpose, location, duration, and responsible
+						agents associated with an event such as a webcast or convention.
+						Ex: <a href="http://data.datacite.org/10.7269/P3RN35SZ">http://data.datacite.org/10.7269/P3RN35SZ</a>
+					</td>
+				</tr>
+		
+				<tr class="row2">
+					<td>Image</td>
+					<td>A visual representation other than text.</td>
+					<td>
+						Digitized or born digital images, drawings or photographs. Ex:
+						<a href="http://data.datacite.org/10.5060/D4RN35SD">http://data.datacite.org/10.5060/D4RN35SD</a>
+					</td>
+				</tr>
+		
+				<tr class="row1">
+					<td>InteractiveResource</td>
+					<td>A resource requiring interaction from the user to be understood, executed, or experienced</td>
+					<td>Training modules, files that require use of a viewer (e.g., Flash), or query/response portals. Ex: <a href="http://data.datacite.org/10.7269/P3TB14TR">http://data.datacite.org/10.7269/P3TB14TR</a></td>
+				</tr>
+		
+				<tr class="row2">
+					<td>Model</td>
+					<td>An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes.</td>
+					<td>Modelled descriptions of, for example, different aspects of languages or a molecular biology reaction chain.</td>
+				</tr>
+		
+				<tr class="row1">
+					<td>PhysicalObject</td>
+					<td>An inanimate, three-dimensional object or substance.</td>
+					<td>
+						Artifacts, specimens.
+						Ex: <a href="http://data.datacite.org/10.7299/X78052RB">http://data.datacite.org/10.7299/X78052RB</a>
+					</td>
+				</tr>
+		
+				<tr class="row2">
+					<td>Service</td>
+					<td>A system that provides one or more functions of value to the end-user.</td>
+					<td>Data management service, authentication service, or photocopying service.</td>
+				</tr>
+		
+				<tr class="row1">
+					<td>Software</td>
+					<td>A computer program in source code (text) or compiled form.</td>
+					<td>Software supporting research. Ex: <a href="http://data.datacite.org/10.5524/100046">http://data.datacite.org/10.5524/100046</a></td>
+				</tr>
+				
+				<tr class="row2">
+					<td>Sound</td>
+					<td>A resource primarily intended to be heard.</td>
+					<td>
+						Audio recording. Ex:
+						<a href="http://data.datacite.org/10.4231/3DZVR.1288284313124">http://data.datacite.org/10.4231/3DZVR.1288284313124</a>
+					</td>
+				</tr>
+				
+				<tr class="row1">
+					<td>Text</td>
+					<td>A resource consisting primarily of words for reading.</td>
+					<td>
+						Grey literature, lab notes, accompanying materials.
+						Ex: <a href="http://data.datacite.org/10.5682/9786065914018">http://data.datacite.org/10.5682/9786065914018</a>
+					</td>
+				</tr>
+		
+				<tr class="row2">
+					<td>Workflow</td>
+					<td>
+						A structured series of steps which can be executed to produce
+						a final outcome, allowing users a means to specify and enact
+						their work in a more reproducible manner.
+					</td>
+					<td>
+						Computational workflows involving sequential operations made
+						on data by wrapped software and may be specified in a format
+						belonging to a workflow management system, such as Taverna
+						(<a href="http://www.taverna.org.uk/">http://www.taverna.org.uk/</a>).
+					</td>
+				</tr>
+		
+				<tr class="row1">
+					<td>Other</td>
+					<td>If selected, supply a value for Resource Type Description.</td>
+					<td>NA</td>
+				</tr>
+			</table>
+		</dd>
 	
-	<tr class="headrow">
-		<th>Option</th>
-		<th>Description</th>
-		<th>Usage Notes</th>
-	</tr>
-
-<tr class="row2"><td>Audiovisual</td><td>A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound.</td><td>May be used for films, video, etc, Ex: <a href="http://data.datacite.org/10.7794/USR3225/ARC.F/0000001">http://data.datacite.org/10.7794/USR3225/ARC.F/0000001</a></td></tr>
-
-<tr class="row1"><td>Collection</td><td>An aggregation of resources of various types. If a collection exists of a single type, use the single type to describe it.</td><td>A collection of samples, or various files making up a report. Ex: <a href="http://data.datacite.org/10.5284/1001038">http://data.datacite.org/10.5284/1001038</a></td></tr>
-
-<tr class="row2"><td>Dataset</td><td>Data encoded in a defined structure.</td><td>Data file or files, Ex: <a href="http://data.datacite.org/10.4231/D39Z90B9T">http://data.datacite.org/10.4231/D39Z90B9T</a></td></tr>
-
-<tr class="row1"><td>Event</td><td>A non-persistent, time-based occurrence.</td><td>Descriptive information and/or content that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event such as a webcast or convention.. Ex: <a href="http://data.datacite.org/10.7269/P3RN35SZ">http://data.datacite.org/10.7269/P3RN35SZ</a></td></tr>
-
-<trclass="row2"><td>Image</td><td>A visual representation other than text.</td><td>Digitized or born digital images, drawings or photographs. Ex: <a href="http://data.datacite.org/10.5060/D4RN35SD">http://data.datacite.org/10.5060/D4RN35SD</a></td></tr>
-
-<tr class="row1"><td>InteractiveResource</td><td>A resource requiring interaction from the user to be understood, executed, or experienced</td><td>Training modules, files that require use of a viewer (e.g., Flash), or query/response portals. Ex: <a href="http://data.datacite.org/10.7269/P3TB14TR">http://data.datacite.org/10.7269/P3TB14TR</a></td></tr>
-
-<tr class="row2"><td>Model</td><td>An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes.</td><td>Modelled descriptions of, for example, different aspects of languages or a molecular biology reaction chain.</td></tr>
-
-<tr class="row1"><td>PhysicalObject</td><td>An inanimate, three-dimensional object or substance.</td><td>Artifacts, specimens.
-Ex: <a href="http://data.datacite.org/10.7299/X78052RB">http://data.datacite.org/10.7299/X78052RB</a></td></tr>
-
-<tr class="row2"><td>Service</td><td>A system that provides one or more functions of value to the end-user.</td><td>Data management service, authentication service, or photocopying service.</td></tr>
-
-<tr class="row1"><td>Software</td><td>A computer program in source code (text) or compiled form.</td><td>Software supporting research. Ex: <a href="http://data.datacite.org/10.5524/100046">http://data.datacite.org/10.5524/100046</a></td></tr>
-
-<tr class="row2><td>Sound</td><td>A resource primarily intended to be heard.</td><td>Audio recording. Ex: <a href="http://data.datacite.org/10.4231/3DZVR.1288284313124">http://data.datacite.org/10.4231/3DZVR.1288284313124</a></td></tr>
-
-<tr class="row1"><td>Text</td><td>A resource consisting primarily of words for reading.</td><td>Grey literature, lab notes, accompanying materials.
-Ex: <a href="http://data.datacite.org/10.5682/9786065914018">http://data.datacite.org/10.5682/9786065914018</a></td></tr>
-
-<tr class="row2><td>Workflow</td><td>A structured series of steps which can be executed to produce a final outcome, allowing users a means to specify and enact their work in a more reproducible manner.</td><td>Computational workflows involving sequential operations made on data by wrapped software and may be specified in a format belonging to a workflow management system, such as Taverna (<a href="http://www.taverna.org.uk/">http://www.taverna.org.uk/</a>).</td></tr>
-
-<tr class="row1"><td>Other</td><td>If selected, supply a value for Resource Type Description.</td><td>NA</td></tr>
-</table
-		<h2/>
 		<dt>What does it mean to publish an identifier?</dt>
 		<dd>
 			Publication of an identifier means making the identifier,
 			its target URL and associate metadata publicly available.
 		</dd>
-		<dt><b>Advanced create identifier form</b></dt>
+	</dl>
+	<h2>Advanced create identifier form</h2>
+	<dl>
+		<dt>Should I use a custom remainder?</dt>
 		<dd>
 			Custom remainders (suffixes) should be unique and opaque. By opaque,
 			it is meant that the alphanumeric string has no meaning. EZID
@@ -164,128 +285,315 @@ Ex: <a href="http://data.datacite.org/10.5682/9786065914018">http://data.datacit
 			the DataCite Kernel is required as a minimum set of metadata.
 			If a richer set of descriptive capability is desired, choose
 			the DataCite Recommended Schema, which is documented here:
-			<a href="http://schema.datacite.org/">http://schema.datacite.org/</a>. When using this schema, provide as many of the elements as possible to enhance the prospects that the metadata will be found, cited and linked to original research. A complete DataCite XML record must be submitted via the EZID <a href="/ezid/doc/apidoc.html">API</a>.
-</dd>
-Three of the most important elements included in the Recommended profile are: <b/>Abstract, Resource Type, and Related Identifiers</b>. A detailed description of the Relation Type selections is below, based on the relationship of the resource being registered (A) and the related resource (B).
+			<a href="http://schema.datacite.org/">http://schema.datacite.org/</a>.
+			When using this schema, provide as many of the elements as possible to
+			enhance the prospects that the metadata will be found, cited and linked
+			to original research. A complete DataCite XML record must be submitted
+			via the EZID <a href="/ezid/doc/apidoc.html">API</a>.
+		</dd>
+		<dd>
+			Three of the most important elements included in the
+			Recommended profile are: <b>Abstract, Resource Type, and Related Identifiers</b>.
+			A detailed description of the Relation Type selections is below,
+			based on the relationship of the resource being registered (A) and the related resource (B).
 
-<table class="info">
-	
-	<tr class="headrow">
-		<th>Option</th>
-		<th>Definition</th>
-		<th>Example and Usage Notes</th>
-	</tr>
-<tr class="row2"><td>IsCitedBy</td><td>indicates that B includes A in a citation</td><td>Recommended for discovery.
-<relatedIdentifier relatedIdentifierType="DOI"relationType="IsCitedBy">10.4232/10.ASEAS-5.2-1 </relatedIdentifier></td></tr>
+			<table class="info">
 
-<tr class="row1"><td>Cites</td><td>indicates that A includes B in a citation</td><td>Recommended for discovery.
-<relatedIdentifier relatedIdentifierType="ISBN”
-relationType="Cites">0761964312 </relatedIdentifier></td></tr>
+				<tr class="headrow">
+					<th style="width: 25%">Option</th>
+					<th style="width: 25%">Definition</th>
+					<th style="width: 50%;">Example and Usage Notes</th>
+				</tr>
+				<tr class="row2">
+					<td>IsCitedBy</td>
+					<td>indicates that B includes A in a citation</td>
+					<td>Recommended for discovery.<br/><br/>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;IsCitedBy&quot;&gt;10.4232/10.ASEAS-5.2-1&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row1">
+					<td>Cites</td>
+					<td>indicates that A includes B in a citation</td>
+					<td>
+						Recommended for discovery.<br/><br/>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;ISBN&quot;
+							relationType=&quot;Cites&quot;&gt;0761964312&lt;/relatedIdentifier&gt;</code>
+					</td>
+				</tr>
 
-<tr class="row2"><td>IsSupplementTo</td><td>indicates that A is a supplement to B</td><td>Recommended for discovery.
-<relatedIdentifier relatedIdentifierType="URN"
-relationType="IsSupplementTo">http://nbn-resolving.de/urn:nbn:de:0168-ssoar-13172 </relatedIdentifier></td></tr>
+				<tr class="row2">
+					<td>IsSupplementTo</td>
+					<td>indicates that A is a supplement to B</td>
+					<td>
+						Recommended for discovery.<br/><br/>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;URN&quot;
+							relationType=&quot;IsSupplementTo&quot;&gt;http://nbn-resolving.de/urn:nbn:de:0168-ssoar-13172&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row1">
+					<td>IsSupplementedBy</td>
+					<td>
+						indicates that B is a supplement to A
+					</td>
+					<td>
+						Recommended for discovery.<br/><br/>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;PMID&quot;
+							relationType=&quot;IsSupplementedBy&quot;&gt;16911322/&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row2">
+					<td>IsContinuedBy</td>
+					<td>
+						indicates A is continued by the work B
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;URN&quot;
+							relationType=&quot;IsContinuedBy&quot;&gt;http://nbn-resolving.de/urn:nbn:de:bsz:21-opus-4967&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
 
-<tr class="row1"><td>IsSupplementedBy</td><td>
-indicates that B is a supplement to A</td><td>
-Recommended for discovery.
-<relatedIdentifier relatedIdentifierType="PMID"
-relationType="IsSupplementedBy">16911322/ </relatedIdentifier></td></tr>
+				<tr class="row1">
+					<td>Continues</td>
+					<td>
+						indicates A is a continuation of the work B
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;URN&quot;
+							relationType=&quot;Continues&quot;&gt;http://nbn-resolving.de/urn:nbn:de:bsz:21-opus-4966&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
 
-<tr class="row2"><td>IsContinuedBy</td><td>
-indicates A is continued by the work B</td><td>
-<relatedIdentifier relatedIdentifierType="URN"
-relationType="IsContinuedBy">http://nbn-resolving.de/urn:nbn:de:bsz:21-opus-4967 </relatedIdentifier></td></tr>
+				<tr class="row2">
+					<td>HasMetadata</td>
+					<td>
+						indicates resource A has additional metadata B
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;HasMetadata&quot; relatedMetadataScheme=&quot;DDI-L&quot;
+							schemeURI=&quot;http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd&quot;&gt;10.1234/567890&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
 
-<tr class="row1"><td>Continues</td><td>
-indicates A is a continuation of the work B</td><td>
-<relatedIdentifier relatedIdentifierType="URN"
-relationType="Continues">http://nbn-resolving.de/urn:nbn:de:bsz:21-opus-4966 </relatedIdentifier></td></tr>
+				<tr class="row1">
+					<td>IsMetadataFor</td>
+					<td>
+						indicates additional metadata A for a resource B
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;IsMetadataFor&quot; relatedMetadataScheme=&quot;DDI-L&quot;
+							schemeURI=&quot;http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd&quot;&gt;10.1234/567891&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
 
-<tr class="row2"><td>HasMetadata</td><td>
-indicates resource A has additional metadata B</td><td>
-<relatedIdentifier relatedIdentifierType="DOI"
-relationType="HasMetadata">10.1234/567890
-relatedMetadataScheme="DDI-L" schemeURI=" http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd"</relatedIdentifier></td></tr>
+				<tr class="row2">
+					<td>IsNewVersionOf</td>
+					<td>
+						indicates A is a new edition of B, where the new edition has been modified or updated
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;IsNewVersionOf&quot;&gt;10.5438/0005&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+			
+				<tr class="row1">
+					<td>IsPreviousVersionOf</td>
+					<td>
+						indicates A is a previous edition of B
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;IsPreviousVersionOf&quot;&gt;10.5438/0007&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row2">
+					<td>IsPartOf</td>
+					<td>
+						indicates A is a portion of B; may be used for elements of a series
+					</td>
+					<td>
+						Recommended for discovery.<br/><br/>
+						
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;ISBN&quot;
+							relationType=&quot;IsPartOf&quot;&gt;0-486-27557-4&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row1">
+					<td>HasPart</td>
+					<td>
+						indicates A includes the part B
+					</td>
+					<td>
+						Recommended for discovery.<br/><br/>
+						
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;HasPart&quot;>10.1234/7894&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
 
-<tr class="row1"><td>IsMetadataFor</td><td>
-indicates additional metadata A for a resource B</td><td>
-<relatedIdentifier relatedIdentifierType="DOI"
-relationType="IsMetadataFor">10.1234/567891
-relatedMetadataScheme="DDI-L" schemeURI=" http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd"</relatedIdentifier></td></tr>
+				<tr class="row2">
+					<td>IsReferencedBy</td>
+					<td>
+						indicates A is used as a source of information by B
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;URL&quot;
+							relationType=&quot;IsReferencedBy&quot;&gt;http://www.testpubl.de&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row1">
+					<td>References</td>
+					<td>
+						indicates B is used as a source of information for A
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;URN&quot;
+							relationType=&quot;References&quot;&gt;http://nbn-resolving.de/urn:nbn:de:bsz:21-opus-963&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row2">
+					<td>IsDocumentedBy</td>
+					<td>
+						indicates B is documentation about/explaining A
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;URL&quot;
+							relationType=&quot;IsDocumentedBy&quot;&gt;http://tobias-lib.uni-tuebingen.de/volltexte/2000/96/&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
 
-<tr class="row2"><td>IsNewVersionOf</td><td>
-indicates A is a new edition of B, where the new edition has been modified or updated</td><td>
-<relatedIdentifier relatedIdentifierType="DOI"
-relationType="IsNewVersionOf">10.5438/0005 </relatedIdentifier></td></tr>
+				<tr class="row1">
+					<td>Documents</td>
+					<td>
+						indicates A is documentation about/explaining B
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;Documents&quot;&gt;10.1234/7836&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row2">
+					<td>IsCompiledBy</td>
+					<td>
+						indicates B is used to compile or create A
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;URL&quot;
+							relationType=&quot;isCompiledBy&quot;&gt;http://d-nb.info/gnd/4513749-3&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row1">
+					<td>Compiles</td>
+					<td>
+						indicates B is the result of a compile or creation event using A
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;URN&quot;
+							relationType=&quot;Compiles&quot;&gt;http://nbn-resolving.de/urn:nbn:de:bsz:21-opus-963&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
 
-<tr class="row1"><td>IsPreviousVersionOf</td><td>
-indicates A is a previous edition of B</td><td>
-<relatedIdentifier relatedIdentifierType="DOI"
-relationType="IsPreviousVersionOf">10.5438/0007 </relatedIdentifier></td></tr>
+				<tr class="row2">
+					<td>IsVariantFormOf</td>
+					<td>
+						indicates A is a variant or different form of B, e.g. calculated or calibrated form or different packaging
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;IsVariantFormOf&quot;&gt;10.1234/8675&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row1">
+					<td>IsOriginalFormOf</td>
+					<td>
+						indicates A is the original form of B
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;IsOriginalFormOf&quot;&gt;10.1234/9035&lt;/relatedIdentifier&gt;
+						</code>
+					</td>
+				</tr>
+				
+				<tr class="row2">
+					<td>IsIdenticalTo</td>
+					<td>
+						indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource
+					</td>
+					<td>
+						<code>
+							&lt;relatedIdentifier relatedIdentifierType=&quot;URL&quot;
+							relationType=&quot;IsIdenticalTo&quot;&gt;http://oac.cdlib.org/findaid/ark:/13030/c8r78fzq&lt;/relatedIdentifier&gt;
+						</code><br/><br/>
+						IsIdenticalTo should be used for a resource that is the same as the
+						registered resource but is saved on another location, maybe another institution.
+					</td>
+				</tr>
+			</table>
+		</dd>
 
-<tr class="row2"><td>IsPartOf</td><td>
-indicates A is a portion of B; may be used for elements of a series</td><td>
-Recommended for discovery.
-<relatedIdentifier relatedIdentifierType="ISBN"
-relationType="IsPartOf">0-486-27557-4 </relatedIdentifier></td></tr>
-
-<tr class="row1"><td>HasPart</td><td>
-indicates A includes the part B</td><td>
-Recommended for discovery.
-<relatedIdentifier relatedIdentifierType="DOI"
-relationType="HasPart">10.1234/7894 </relatedIdentifier></td></tr>
-
-<tr class="row2"><td>IsReferencedBy</td><td>
-indicates A is used as a source of information by B</td><td>
-<relatedIdentifier relatedIdentifierType="URL"
-relationType="IsReferencedBy">http://www.testpubl.de </relatedIdentifier></td></tr>
-
-<tr class="row1"><td>References</td><td>
-indicates B is used as a source of information for A</td><td>
-<relatedIdentifier relatedIdentifierType="URN"
-relationType="References">http://nbn-resolving.de/urn:nbn:de:bsz:21-opus-963</relatedIdentifier></td></tr>
-
-<tr class="row2"><td>IsDocumentedBy</td><td>
-indicates B is documentation about/explaining A</td><td>)
-<relatedIdentifier relatedIdentifierType="URL"
-relationType="IsDocumentedBy">http://tobias-lib.uni-tuebingen.de/volltexte/2000/96/ </relatedIdentifier></td></tr>
-
-<tr class="row1"><td>Documents</td><td>
-indicates A is documentation about/explaining B</td><td>
-<relatedIdentifier relatedIdentifierType="DOI"
-relationType="Documents">10.1234/7836 </relatedIdentifier></td></tr>
-
-<tr class="row2"><td>IsCompiledBy</td><td>
-indicates B is used to compile or create A</td><td>
-<relatedIdentifier relatedIdentifierType="URL"
-relationType="isCompiledBy">http://d-nb.info/gnd/4513749-3 </relatedIdentifier></td></tr>
-
-<tr class="row1"><td>Compiles</td><td>
-indicates B is the result of a compile or creation event using A</td><td>
-<relatedIdentifier relatedIdentifierType="URN"
-relationType="Compiles">http://nbn-resolving.de/urn:nbn:de:bsz:21-opus-963 </relatedIdentifier></td></tr>
-
-<tr class="row2"><td>IsVariantFormOf</td><td>
-indicates A is a variant or different form of B, e.g. calculated or calibrated form or different packaging</td><td>
-<relatedIdentifier relatedIdentifierType="DOI"
-relationType="IsVariantFormOf">10.1234/8675 </relatedIdentifier></td></tr>
-
-<tr class="row1"><td>IsOriginalFormOf</td><td>
-indicates A is the original form of B</td><td>
-<relatedIdentifier relatedIdentifierType="DOI"
-relationType="IsOriginalFormOf">10.1234/9035 </relatedIdentifier></td></tr>
-
-<tr class="row2"><td>IsIdenticalTo</td><td>
-indicates that A is identical to B, for use when there is a need to register two separate instances of the same resource</td><td>
-<relatedIdentifier relatedIdentifierType="URL"
-relationType="IsIdenticalTo">http://oac.cdlib.org/findaid/ark:/13030/c8r78fzq </relatedIdentifier>
-IsIdenticalTo should be used for a resource that is the same as the registered resource but is saved on another location, maybe another institution.</td></tr>
-
-		
 		<dt>What is Harvesting and Indexing?</dt>
 		<dd>
-		Your choice of on or off in the Harvesting/Indexing field pertains to making the metadata available for harvesting and/or indexing. This refers to inclusion in DataCite's Metadata Search store (MDS), which is accessible via an OAI-PMH interface, as well as EZID's metadata store. Third party indexers may access the metadata in these ways. If you choose "on," it does not guarantee that the metadata will be harvested or indexed, but if you choose "off," it removes the possibility. The default setting is "on."</dd>
+			Your choice of on or off in the Harvesting/Indexing field
+			pertains to making the metadata available for harvesting
+			and/or indexing. This refers to inclusion in DataCite's Metadata
+			Search store (MDS), which is accessible via an OAI-PMH interface,
+			as well as EZID's metadata store. Third party indexers may access
+			the metadata in these ways. If you choose &quot;on,&quot; it
+			does not guarantee that the metadata will be harvested or indexed,
+			but if you choose &quot;off,&quot; it removes
+			the possibility. The default setting is &quot;on.&quot;</dd>
 	</dl>
 
 	<h2>Manage IDs</h2>
@@ -300,17 +608,40 @@ IsIdenticalTo should be used for a resource that is the same as the registered r
 		<dt>ID detail view</dt>
 		<dd>
 			You can view detailed descriptive information
-			about identifiers you have created. You'll also see a QR code for the URL version of the identifier. On this screen, you can
+			about identifiers you have created. You'll also see a QR code
+			for the URL version of the identifier. On this screen, you can
 			edit and add to the information you have entered into EZID to describe the object.
 		</dd>
 		<dt>Status</dt>
-		<dd>Each identifier in EZID has a status. Status refers to the scope of an identifier's visibility. You can edit the status in the 'About the Identifier' section. The default value is public (visible to anyone). If the status is public, you can change it to unavailable. Also, if the status is public, you can allow or disallow harvesting. Allowing harvesting means making it available for export to external indexing and harvesting services.<br/><br/>Here is a summary of what the status values mean:</dd>
+		<dd>
+			Each identifier in EZID has a status. Status refers to
+			the scope of an identifier's visibility. You can edit the
+			status in the 'About the Identifier' section. The default
+			value is public (visible to anyone). If the status is public,
+			you can change it to unavailable. Also, if the status is public,
+			you can allow or disallow harvesting. Allowing harvesting means
+			making it available for export to external indexing and
+			harvesting services.<br/><br/>Here is a summary of what the status values mean:
+		</dd>
  
-<dd><i>public:</i> The default value. Anyone can see a public identifier.</dd>
-<dd><i>reserved:</i> The identifier is known only to EZID and visible only by owners. This status may be used to reserve an identifier name within EZID without advertising the identifier's existence to resolvers and other external services. A reserved identifier may be deleted.</dd>
-<dd><i>unavailable:</i> The identifier is public, but the object referenced by the identifier is not available. A reason for the object's unavailability may be provided. The identifier redirects to an EZID-provided "tombstone" page (an HTML page that displays the identifier's citation metadata and the reason for the object's unavailability) regardless of its target URL. The page displays the reason provided for its unavailability.</dd>
-</dt>
-		
+		<dd><i>public:</i>
+			The default value. Anyone can see a public identifier.
+		</dd>
+		<dd>
+			<i>reserved:</i> The identifier is known only to EZID
+			and visible only by owners. This status may be used to reserve
+			an identifier name within EZID without advertising the identifier's existence
+			to resolvers and other external services. A reserved identifier may be deleted.
+		</dd>
+		<dd>
+			<i>unavailable:</i> The identifier is public, but the object referenced
+			by the identifier is not available. A reason for the object's
+			unavailability may be provided. The identifier redirects to an
+			EZID-provided &quot;tombstone&quot; page (an HTML page that
+			displays the identifier's citation metadata and the reason for
+			the object's unavailability) regardless of its target URL. The page
+			displays the reason provided for its unavailability.
+		</dd>
 	</dl>
 	
 	<h2>Lookup IDs</h2>
