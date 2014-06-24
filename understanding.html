@@ -13,11 +13,11 @@
     Objects can be files, parts of files, names of persons or
     organizations, abstractions, etc. Objects can be online or
     offline. Character strings include URLs, serial numbers,
-    names addresses, etc. A &quot;persistent identifier&quot; is an
+    names, addresses, etc. A &quot;persistent identifier&quot; is an
     identifier that is available and managed over time; it will
     not change if the item is moved or renamed. This means that
     an item can be reliably referenced for future access by
-    humans and software. EZID currently supports persistent for
+    humans and software. EZID currently supports persistence for
     two kinds of identifiers: DataCite Digital Object Identifiers (DOIs) and lower-cost
     Archival Resource Keys (ARKs).
   </p>
@@ -28,7 +28,7 @@
     Identifier.&quot; It is an identifier originating from the
     publishing world and in widespread use for journal articles.
     DOIs become persistent when the objects and identifier
-    forwarding information is maintained.
+    forwarding information are maintained.
   </p>
  
     <h2>What is an ARK?</h2>
@@ -36,7 +36,7 @@
     ARK stands for &quot;Archival Resource Key.&quot; It is an identifier
     originating from the library, archive and museum community.
     ARKs become persistent when the objects and identifier
-    forwarding information is maintained.
+    forwarding information are maintained.
   </p>
 	
 	<h2>Can DOIs and ARKs be used together?</h2>
@@ -45,10 +45,13 @@
  <li>Keeping track of data before a decision has been made about whether or not it is going to be retained (ARKs can be deleted).</li>
  </ul>
  <p>This can make it attractive to use ARKs during the early part of a dataset&#39;s &quot;life&quot; or the early stages of the research process. Then, when the time comes to begin writing up results and it becomes clear which object(s) will be cited, it may appropriate to get DOIs for those objects.</p>
- <p>DOI identifiers have the citation-level &quot;reputation&quot; and:<ul>
- <li>It is possible to use the ARK identifier of the cited object as the suffix for the DOI so that there is a traceable connection between the two.</li>
- </ul>
- <p>In this way, the two identifier schemes can work together to support the research data life cycle. With EZID, clients get access to both of these identifiers and can take best advantage of both approaches.<p>
+ <p>DOIs have the citation-level &quot;reputation&quot; and it is possible to use the ARK of the cited object as the &quot;suffix&quot; for the DOI so that there is a traceable connection between the two. Here is what that means:</p>
+ <p>Step 1. You assign an ARK to a resource for good management and tracking: ark:/99999/<span style="color:#FF0000">fk4sf2w65j</span></p>
+ <p>Step 2. You decide to cite the resource, so you want a DOI.</p>
+ <p>Step 3. Using either the Advanced Create UI or the API, request a doi with this form: doi:10.5072/<span style="color:#FF0000">FK2fk4sf2w65j</span></p>
+ 
+ 
+ <p>In this way, the two identifiers have a relationship, so the object can be tracked throughout its life cycle. With EZID, clients get access to both of these identifiers and can take best advantage of both approaches.<p>
     <h2>What is identifier resolution?</h2>
   <p>
     Instead of leading directly to an object, one
@@ -75,7 +78,7 @@
   <h2>What is metadata?</h2>
   
   <p>
-    Metadata is information (data)about the object, such as the name of the object's creator,
+    Metadata is information (data) about the object, such as the name of the object's creator,
     the date of creation, the target URL, the version of the
     object, its title, and so on. EZID allows the user to enter
     metadata at the same time as an identifier is requested.
