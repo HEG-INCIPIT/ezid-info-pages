@@ -44,6 +44,105 @@
 </div>
 
 
+<div id="dcxml_publisher_help" class="help_window">
+	<h1>Publisher</h1>
+	<p>
+		The name of the entity that holds, archives, publishes prints,
+		distributes, releases, issues, or produces the resource. This
+		property will be used to formulate the citation, so consider
+		the prominence of the role. (Required)
+	</p>
+	<p>
+		Examples: World Data Center for Climate (WDCC);
+		GeoForschungsZentrum Potsdam (GFZ);
+		Geological Institute, University of Tokyo</p> 
+</div>
+
+
+<div id="dcxml_publication_year_help" class="help_window">
+	<h1>Publication Year</h1>
+	<p>
+		The year when the data was or will be made publicly available.
+		If an embargo period has been in effect, use the date when
+		the embargo period ends.  (Required)
+	</p>
+	<p>Format: YYYY</p>
+</div>
+
+
+<div id="dcxml_language_help" class="help_window">
+	<h1>Language</h1>
+	<p>
+		The primary language of the resource.
+	</p>
+	<p>
+		Examples: en, de, fr 
+	</p> 
+</div>
+
+
+<div id="dcxml_version_help" class="help_window">
+	<h1>Version</h1>
+	<p>
+		The version number of the resource.</p>
+	<p>
+		Suggested practice: track major_version.minor_version.</p>
+	<p>
+		Register a new identifier for a major version change.
+		Individual stewards need to determine which are major vs. minor versions.</p>
+	<p>
+		May be used in conjunction with properties AlternateIdentifier and 
+		RelatedIdentifier to indicate various information updates.</p>
+	<p>
+		May be used in conjunction with Description to indicate the nature and
+		file/record range of version.
+	</p> 
+</div>
+
+
+<div id="dcxml_resource_type_general_help" class="help_window">
+	<h1>Resource Type</h1>
+	<p>
+		The general type of a resource.  For definitions of
+		the selections, consult the <a href="/home/help" target="_blank">full online help</a>.
+		It is best practice to indicate the Resource Type.
+	</p>
+</div>
+
+
+<div id="dcxml_resource_type_help" class="help_window">
+	<h1>Resource Type Description</h1>
+	<p>
+		Free text field available to provide a more specific description
+		of the resource type, as appropriate. If left incomplete, this
+		will auto-fill to the value of the Resource Type field.
+	</p>
+</div>
+
+
+<div id="dcxml_descriptions_help" class="help_window">
+	<h1>Description</h1>
+	<p>
+		Additional information to describe the resource, including the abstract. May be used for technical information. 
+	</p>
+	
+	<dl>
+		<dt>Description</dt>
+		<dd>
+			It is best practice to supply an Abstract.
+		</dd>
+		
+		<dt>Type</dt>
+		<dd>
+			The type of the description.
+		</dd>
+		
+		<dd>
+			If description is used, type is mandatory.
+		</dd>
+	</dl>
+</div>
+
 
 <div id="dcxml_subjects_help" class="help_window">
 	<h1>Subject</h1>
@@ -63,7 +162,6 @@
 		<dd>Examples: http://id.loc.gov/authorities/subjects; http://dewey.info/</dd>
 	</dl>
 </div>
-
 
 
 <div id="dcxml_contributors_help" class="help_window">
@@ -117,6 +215,15 @@
 </div>
 
 
+<div id="dcxml_formats_help" class="help_window">
+	<h1>Format</h1>
+	<p>
+		Technical format of the resource.
+		Use file extension or MIME type where possible.</p>
+	<p>
+		Examples: PDF, XML, MPG, application/pdf, text/xml, video/mpeg</p>
+</div>
+
 
 <div id="dcxml_dates_help" class="help_window">
 	<h1>Date</h1>
@@ -166,8 +273,6 @@
 </div>
 
 
-
-
 <div id="dcxml_rel_ids_help" class="help_window">
 	<h1>Related Identifier</h1>
 	<p>
@@ -198,7 +303,8 @@
 		<dd>The type of the scheme. Use only with this relation pair:
 (HasMetadata/ IsMetadataFor). Examples: XSD, DDT, Turtle</dd>
 </div>
-	
+
+
 <div id="dcxml_rights_help" class="help_window">
 	<h1>Rights</h1>
 	<p>
@@ -223,34 +329,6 @@
 		<dd>Example: http://creativecommons.org/licenses/by/3.0/de/deed.en</dd>
 	</dl>
 </div>
-
-
-
-
-<div id="dcxml_descriptions_help" class="help_window">
-	<h1>Description</h1>
-	<p>
-		Additional information to describe the resource, including the abstract. May be used for technical information. 
-	</p>
-	
-	<dl>
-		<dt>Description</dt>
-		<dd>
-			It is best practice to supply an Abstract.
-		</dd>
-		
-		<dt>Type</dt>
-		<dd>
-			The type of the description.
-		</dd>
-		
-		<dd>
-			If description is used, type is mandatory.
-		</dd>
-	</dl>
-</div>
-
-
 
 
 <div id="dcxml_geolocations_help" class="help_window">
@@ -292,47 +370,11 @@
 	</dl>
 </div>
 
-<div id="dcxml_publisher_help" class="help_window">
-	<h1>Publisher</h1>
+
+<div id="dcxml_sizes_help" class="help_window">
+	<h1>Size</h1>
 	<p>
-		The name of the entity that holds, archives, publishes prints,
-		distributes, releases, issues, or produces the resource. This
-		property will be used to formulate the citation, so consider
-		the prominence of the role. (Required)
-	</p>
+		Unstructured size information about the resource.</p>
 	<p>
-		Examples: World Data Center for Climate (WDCC);
-		GeoForschungsZentrum Potsdam (GFZ);
-		Geological Institute, University of Tokyo</p> 
-</div>
-
-
-<div id="dcxml_publication_year_help" class="help_window">
-	<h1>Publication Year</h1>
-	<p>
-		The year when the data was or will be made publicly available.
-		If an embargo period has been in effect, use the date when
-		the embargo period ends.  (Required)
-	</p>
-	<p>Format: YYYY</p>
-</div>
-
-
-<div id="dcxml_resource_type_general_help" class="help_window">
-	<h1>Resource Type</h1>
-	<p>
-		The general type of a resource.  For definitions of
-		the selections, consult the <a href="/home/help" target="_blank">full online help</a>.
-		It is best practice to indicate the Resource Type.
-	</p>
-</div>
-
-
-<div id="dcxml_resource_type_help" class="help_window">
-	<h1>Resource Type Description</h1>
-	<p>
-		Free text field available to provide a more specific description
-		of the resource type, as appropriate. If left incomplete, this
-		will auto-fill to the value of the Resource Type field.
-	</p>
+		Examples: "15 pages", "6 MB"</p>
 </div>
