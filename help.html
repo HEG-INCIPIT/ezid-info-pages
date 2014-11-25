@@ -573,6 +573,54 @@
 						registered resource but is saved on another location, maybe another institution.
 					</td>
 				</tr>
+				<tr class="row1">
+				<td>IsReviewedBy</td>
+				<td>
+				indicates that A is reviewed by B
+				</td>
+				<td>
+				<code>&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;IsReviewedBy&quot;&gt;10.5256/F1000RESEARCH.4288.R4745&lt;/relatedIdentifier&gt;
+				</code>
+				</td>
+				</tr>
+				<tr class="row2">
+				<td>Reviews</td>
+				<td>
+				indicates that A is a review of B
+				</td>
+				<td>
+				<code>&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;Reviews&quot;&gt;10.12688/f1000research.4001.1&lt;/relatedIdentifier&gt;
+				</code>
+				</td>
+				</tr>
+				<tr class="row1">
+				<td>IsDerivedFrom</td>
+				<td>
+				indicates B is a source upon which A is based
+				</td>
+				<td>
+				<code>&lt;relatedIdentifier relatedIdentifierType=&quot;DOI&quot;
+							relationType=&quot;IsReviewedBy&quot;&gt;10.6078/M7DZ067C&lt;/relatedIdentifier&gt;
+				</code><br/>
+				IsDerivedFrom should be used for a resource that is a derivative of an original resource.<br/>
+In this example, the dataset is derived from a larger dataset and  data values have been manipulated from their original state.
+				</td>
+				</tr>
+				<tr class="row2">
+				<td>IsSourceOf</td>
+				<td>
+				indicates A is a source upon which B is based
+				</td>
+				<td>
+				<code>&lt;relatedIdentifier relatedIdentifierType=&quot;URL&quot;
+							relationType=&quot;Reviews&quot;&gt;http://opencontext.org/projects/81204AF8-127C-4686-E9B0-1202C3A47959&lt;/relatedIdentifier&gt;
+				</code><br/>
+				IsSourceOf is the original resource from which a derivative resource was created.<br/> 
+In this example, this is the original dataset without value manipulation, and the source of the derived dataset.  
+				</td>
+				</tr>
 			</table>
 		</dd>
 
