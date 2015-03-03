@@ -1,5 +1,7 @@
 {% extends "layouts/information.html" %}
 
+{% load layout_extras %}
+
 {% block title %}Pricing{% endblock %}
 
 {% block main_column %}
@@ -71,7 +73,6 @@
 </table>
   
 <p>For any questions regarding the above categories or rates, please <a href="/contact">contact us</a>.<p>
-<p>University of California researchers: please <a href="/contact">contact us</a> for UC rates.</p>
-
+{% host_based_include "info/localized/_/pricing_include.html" %}
   </p>
 {% endblock %}
