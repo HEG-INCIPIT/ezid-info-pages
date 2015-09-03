@@ -1,16 +1,20 @@
 {% extends "layouts/information.html" %}
-
 {% load layout_extras %}
+{% load i18n %}
 
-{% block title %}About EZID{% endblock %}
+{% block title %}{% trans "About EZID" %}{% endblock %}
+{% block heading %}{% content_heading _("About Us") %}{% endblock %}
 {% block content %}
-{% content_heading "About Us" %}
-
 <div class="container vertical-buffer-xs">
 
   {% host_based_include "info/localized/_/about_us_include.html" %}
 
 <p>&nbsp;</p>
+{% comment %}Translators: Copy HTML tags over and only translate words outside of these tags 
+i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS</p> 
+i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a> 
+{% endcomment %}
+{% blocktrans trimmed %}
 	<h2>About EZID</h2>
 
 <p>
@@ -51,6 +55,7 @@
         consortium, which is dedicated to providing the social and technical 
         infrastructure that will enable data sharing and publication. 
 </p>
+{% endblocktrans %}
 
 </div>
 {% endblock %}

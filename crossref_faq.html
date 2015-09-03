@@ -5,19 +5,18 @@
 
 {% comment %}Don't need to translate this{% endcomment %}
 {% block title %}CrossRef FAQ{% endblock %}
-
+{% block heading %}{% content_heading _("CrossRef: Frequently Asked Questions") %}{% endblock %}
 {% block content %}
-{% content_heading _("CrossRef: Frequently Asked Questions") %}
 
 {% comment %}Don't need to translate this{% endcomment %}
-{% learn_breadcrumb 'Crossref FAQ' %}
+{% learn_breadcrumb 'CrossRef FAQ' 'FAQ' '#05' %}
 <div class="vertical-buffer-20"></div>
 <div class="container">
 {% comment %}Translators: Copy HTML tags over and only translate words outside of these tags 
-i.e.: <p>TRANSLATE THIS ONLY</p> 
-i.e.: <a href="blah blah blah">AND KEEP HTML TAGS</a> 
+i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS</p> 
+i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a> 
 {% endcomment %}
-{% blocktrans %}
+{% blocktrans trimmed %}
 <p><strong>How do I get my data into CrossRef</strong></p>
 <p>Lorem ipsum dolor sit amet, offendit vivendum volutpat ad sea. Per tale dicta an. Agam delenit abhorreant mel te, oratio aeterno definitionem vim ei, ea malorum maiestatis deterruisset eos. Pro eu quem oblique detracto.</p>
 
