@@ -1,3 +1,4 @@
+{% load i18n %}
 <script type="text/javascript">
   /* these javascript methods replace some
    * django template tags since it is hard to keep
@@ -41,167 +42,61 @@
 	
 </script>
 
-<div id="create_id_01_content" class="help_window">
-	<p>
-		<strong>DOIs:</strong> Recommended for final products, published materials, and citation. Use for objects under good long-term management. Cannot be deleted.
-	</p>
-	<p>
-		<strong>ARKs:</strong> Recommended for projects requiring more flexibility, early or unpublished versions of material. Can be deleted.
-	</p>
+{% comment %}Translators: Copy HTML tags over and only translate words outside of these tags 
+i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS. PLEASE PRESERVE HTML TAGS</p> 
+{% endcomment %}
+{% blocktrans trimmed %}
+<div id="choose_id_demo_content" class="help_window">
+  <p>
+    <strong>DOIs:</strong> Recommended for final products, published materials, and citation. Use for objects under good long-term management.
+  </p>
+  <p>
+    <strong>ARKs:</strong> Recommended for projects requiring more flexibility, early or unpublished versions of material.
+  </p>
 </div>
- <div id="remainder_guidelines" class="help_window">
-	<h1>About custom remainders</h1>
-	<p>
-		Custom remainders (suffixes) should be unique and opaque. By opaque,
-		it is meant that the alphanumeric string has no meaning.
-		EZID strongly discourages placing brand strings in the
-		remainder because successor organizations do not often honor
-		previous brand and name assignments.
-	</p>
-	<p>
-		Because it is difficult to do this manually, it is
-		recommended that EZID generate new identifiers in
-		order to guarantee that they are unique and opaque.  
-	</p>
+<div id="choose_id_content" class="help_window">
+  <p>
+    <strong>DOIs:</strong> Recommended for final products, published materials, and citation. Use for objects under good long-term management. Cannot be deleted.
+  </p>
+  <p>
+    <strong>ARKs:</strong> Recommended for projects requiring more flexibility, early or unpublished versions of material. Can be deleted.
+  </p>
 </div>
-
-<div id="which_profile" class="help_window">
-	<h1>Which citation profile should I use?</h1>
-
-	<p>
-		DataCite: the DataCite profile is required for DOIs.
-		It is fully documented here: 
-		<a href="http://schema.datacite.org" target="_blank">http://schema.datacite.org</a>.
-		EZID online help is also available.
-	</p>
-	<p>
-		Dublin Core: the Dublin Core profile is provided
-		for interoperability. It is fully documented here:
-		<a href="http://dublincore.org/documents/dces/" target="_blank">http://dublincore.org/documents/dces/</a>
-	</p>	
-		
-	<p>
-		ERC (aka, Dublin Kernel): the Electronic Resource Citation (ERC)
-		profile is the EZID UI default for ARKs. It is fully documented here:
-		<a href="http://dublincore.org/groups/kernel/spec/" target="_blank">http://dublincore.org/groups/kernel/spec/</a>
-		Metadata features developed for the ARK resolver
-		are aimed at records stored with this format first.
-	</p>
+ <div id="custom_remainder_content" class="help_window">
+  <p>
+    EZID will create a unique string for you. If you want to do this yourself, bear this in mind: semantics can work if they are intrinsic to the object being registered. But, if you include information that is subject to change, it works against persistence. 
+  </p>
 </div>
 
-<div id="public_id_help" class="help_window">
-	<h1>Status</h1>
-	<p>
-		<strong>public</strong>: the identifier is viewable by anyone.
-	</p>
-	
-	<p>
-		<strong>reserved</strong>: the identifier is known only to EZID. May be used
-		to reserve an identifier name within EZID without advertising
-		the identifier's existence to resolvers and other external services. May be deleted.
-	</p>
-	
-	<p>
-		<strong>unavailable</strong>: The identifier is public, but only insofar as it
-		redirects to an EZID-provided "tombstone" page, displaying the identifier's
-		citation metadata and the reason for the object's unavailability.
-	</p>
+<div id="describe_profile_frontpage_content" class="help_window">
+  <p>
+    <strong>DataCite:</strong> required for DOIs. More here: <a href="http://schema.datacite.org">http://schema.datacite.org</a>
+  </p>
+  <p>
+    <strong>ERC:</strong> Electronic Resource Citation, default for ARKs. More here: <a href="http://dublincore.org/groups/kernel/spec/">http://dublincore.org/groups/kernel/spec/</a>
+  </p>
 </div>
 
-
-
-<div id="unavail_reason_help" class="help_window">
-	<h1>Reason for Unavailability</h1>
-	<p>
-		The reason you supply will appear on the identifier's manage page,
-		through the API, and on an EZID-provided &quot;tombstone&quot; page
-		(an HTML page that displays the identifier's citation metadata and
-		the reason for the object's unavailability) regardless of its target URL.
-	</p>
+<div id="describe_profile_content" class="help_window">
+  <p>
+    <strong>DataCite:</strong> required for DOIs. More here: <a href="http://schema.datacite.org">http://schema.datacite.org</a>
+  </p>
+  <p>
+    <strong>Dublin Core:</strong> More here: <a href="http://dublincore.org/documents/dces/">http://dublincore.org/documents/dces/</a>
+  </p>
+  <p>
+    <strong>ERC:</strong> Electronic Resource Citation, default for ARKs. More here: <a href="http://dublincore.org/groups/kernel/spec/">http://dublincore.org/groups/kernel/spec/</a>
+  </p>
 </div>
 
-
-<div id="coowners_help" class="help_window">
-	<h1>About co-ownership</h1>
-	<p>
-		Co-ownership is when one EZID user account designates another
-		EZID user account as co-owner of the first account's identifiers.
-		This gives the second EZID user account the right to manage
-		and edit detailed information about an identifier.
-	</p>
+<div id="decide_public_content" class="help_window">
+  <p>
+    A public status means the identifier is viewable by anyone. The reserved status means it is viewable only by owners, so “reserved” is a great way to save a DOI or ARK for use later. Reserved IDs can be deleted.
+  </p>
 </div>
-
-<div id="disabled_edit_help" class="help_window">
-	<h1>Why is the edit button disabled?</h1>
-	<p>
-		This identifier is currently editable only
-		through the EZID API.
-	</p>
+<div id="decide_export_content" class="help_window">
+  <p>
+    Your choice pertains to making the metadata available for harvesting and/or indexing. Choosing "Yes" does not guarantee that the metadata will be harvested or indexed, but choosing "No" removes the possibility.
+  </p>
 </div>
-
-<div id="datacite_creator_help" class="help_window">
-	<h1>Unable to enter a creator?</h1>
-	<p>
-		A creator value is required in the datacite profile.
-		If one is unavailable, we recommend using one of the following
-		standard machine-recognizable codes.
-		<strong>Selecting the code from the list below will automatically
-		insert it in the form for you.</strong>
-	</p>
-	
-	<script type="text/javascript">unavailable_codes("datacite.creator");</script>
-	{# unavailable_codes "datacite.creator" #}
-</div>
-
-<div id="datacite_title_help" class="help_window">
-	<h1>Unable to enter a title?</h1>
-	<p>
-		A title value is required in the datacite profile.
-		If one is unavailable, we recommend using one of the following
-		standard machine-recognizable codes.
-		<strong>Selecting the code from the list below will automatically
-		insert it in the form for you.</strong>
-	</p>
-	
-	<script type="text/javascript">unavailable_codes("datacite.title");</script>
-	{# unavailable_codes "datacite.title" #}
-</div>
-
-<div id="datacite_publisher_help" class="help_window">
-	<h1>Unable to enter a publisher?</h1>
-	<p>
-		A publisher value is required in the datacite profile.
-		If one is unavailable, we recommend using one of the following
-		standard machine-recognizable codes.
-		<strong>Selecting the code from the list below will automatically
-		insert it in the form for you.</strong>
-	</p>
-	<script type="text/javascript">unavailable_codes("datacite.publisher");</script>
-	{# unavailable_codes "datacite.publisher" #}
-</div>
-
-<div id="datacite_publicationyear_help" class="help_window">
-	<h1>Unable to enter a publication year?</h1>
-	<p>
-		A 4-digit publication year value is required in the datacite profile.
-		If one is unavailable, we recommend using one of the following
-		standard machine-recognizable codes.
-		<strong>Selecting the code from the list below will automatically
-		insert it in the form for you.</strong>
-	</p>
-	<script type="text/javascript">unavailable_codes("datacite.publicationyear");</script>
-	{# unavailable_codes "datacite.publicationyear" #}
-</div>
-
-<div id="export_help" class="help_window">
-	<h1>About harvesting/indexing</h1>
-	<p>
-		Your choice pertains to making the metadata <em>available</em>
-		for harvesting and/or indexing.  Choosing &quot;Yes&quot;
-		does not guarantee that the metadata will be harvested or indexed,
-		but if you choose &quot;No,&quot; it removes the possibility.
-		See the online Help for more information about harvesting
-		and indexing.
-	</p>
-	
-</div>
+{% endblocktrans %}
