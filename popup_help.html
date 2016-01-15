@@ -32,7 +32,7 @@
    	
    	outstr += "<ul>\n";
    	for (var i=0;i<items.length;i++){
-   		outstr += "<li><a class=\"link__primary\" href=\"#\" + htmlEscape(items[i][0]) +
+   		outstr += "<li><a class=\"link__primary\" href=\"#" + htmlEscape(items[i][0]) +
    			"_" + for_field + "\" name=\"code_insert_link\">" +
         htmlEscape("(:" + items[i][0] + ")" ) + "</a> " + htmlEscape(items[i][1]) + "</li>";
    	}
