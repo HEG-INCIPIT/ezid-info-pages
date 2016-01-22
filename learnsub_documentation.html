@@ -1,5 +1,5 @@
 <div class="panel-body">
-<h4>Non-technical Documentation</h4>
+<h2 class="heading_2">Non-technical Documentation</h2>
 
 <!-- ************************************************** -->
 <!-- ***** Please do not modify this next section ***** -->
@@ -21,7 +21,7 @@
 <!-- ********************************************************************** -->
 <!-- ************  Editable content: Understanding Identifiers  *********** -->
 <!-- ********************************************************************** -->
-          <h5>What is a long-term identifier?</h5>
+          <h3 class="heading_3">What is a long-term identifier?</h3>
 
             <p>An identifier is an association between a character string and an object.
             Objects can be files, parts of files, names of persons or
@@ -35,20 +35,20 @@
             two kinds of identifiers: DataCite Digital Object Identifiers (DOIs) and lower-cost
             Archival Resource Keys (ARKs).</p>
 
-          <h5>What is a DOI?</h5>
+          <h3 class="heading_3">What is a DOI?</h3>
             <p>DOI stands for &quot;Digital Object
               Identifier.&quot; It is an identifier originating from the
               publishing world and in widespread use for journal articles.
               DOIs become persistent when the objects and identifier
               forwarding information are maintained.</p>
 
-          <h5>What is an ARK?</h5>
+          <h3 class="heading_3">What is an ARK?</h3>
             <p>ARK stands for &quot;Archival Resource Key.&quot; It is an identifier
               originating from the library, archive and museum community.
               ARKs become persistent when the objects and identifier
               forwarding information are maintained.</p>
 
-          <h5>Can DOIs and ARKs be used together?</h5>
+          <h3 class="heading_3">Can DOIs and ARKs be used together?</h3>
             <p>ARK identifiers have certain features that can be very useful for:<p>
             <ul>
               <li>Keeping track of many granules of a dataset (ARKs will be able to &quot;pass through&quot; a suffix, so many thousands of items can be referenced on the basis of a single registration);</li>
@@ -61,7 +61,7 @@
             <p>Step 3. Using either the Advanced Create UI or the API, request a doi with this form: doi:10.5072/<span class="hl1">FK2fk4sf2w65j</span></p>
             <p>In this way, the two identifiers have a relationship, so the object can be tracked throughout its life cycle. With EZID, clients get access to both of these identifiers and can take best advantage of both approaches.<p>
 
-          <h5>What is identifier resolution?</h5>
+          <h3 class="heading_3">What is identifier resolution?</h3>
             <p>Instead of leading directly to an object, one
             identifier frequently points to another, or &quot;target
             URL&quot;, that leads directly to the object. The process
@@ -83,7 +83,7 @@
             resolvers: N2T (Name-to-Thing) based at n2t.net and the DOI
             (Digital Object Identifier) resolver based at doi.dx.org.</p>
 
-          <h5>What is metadata?</h5>
+          <h3 class="heading_3">What is metadata?</h3>
             <p>Metadata is information (data) about the object, such as the name of the object's creator,
               the date of creation, the target URL, the version of the
               object, its title, and so on. EZID allows the user to enter
@@ -93,7 +93,7 @@
               higher-level assurances of long-term persistence.
             </p>
 
-          <h5>Who should I contact for more information?</h5>
+          <h3 class="heading_3">Who should I contact for more information?</h3>
             <p>Please <a class="link__primary"  href="/contact">contact us</a>
               with any questions or comments. Also, see
               <a class="link__primary"  href="/learn/id_basics">Identifier Basics</a>
@@ -118,76 +118,15 @@
   <p><a href="http://www.cdlib.org/services/infrastructure/docs/EZIDServiceGuidelines.pdf" class="pdf-link" title="PDF Document" target="_blank">EZID Service Guidelines</a></p>
 
 
-  <h4>Technical Documentation</h4>
+  <h2 class="heading_2">Technical Documentation</h2>
 
+  <p><a class="link__primary" href="/learn/id_concepts">Identifier Concepts</a></p>
   <p><a class="link__primary" href="/doc/apidoc.html">API Documentation</a></p>
   <p><a class="link__primary" href="/doc/apidoc.html#oai-pmh-harvesting">OAI-PMH Service Documentation</a></p>
-
-<!-- ************************************************** -->
-<!-- ***** Please do not modify this next section ***** -->
-<!-- ************************************************** -->
-  <div class="accordion" id="accordion_software">
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_software" href="#accordion_software_collapse01">
-          Open Source Software for EZID
-        </a>
-      </div>
-      <div id="accordion_software_collapse01" class="accordion-body collapse">
-        <div class="accordion-inner horizontal-buffer-xs vertical-buffer-xs vertical-buffer-bot-md">
-<!-- ************************************************** -->
-<!-- ******* Please do not modify section above ******* -->
-<!-- ************************************************** -->
-
-<!-- ********************************************************************** -->
-<!-- ************  Editable content: Understanding Identifiers  *********** -->
-<!-- ********************************************************************** -->
-        <p><strong>IMPORTANT:</strong> The software listed below is not endorsed or supported 
-           by the EZID Team. It is listed here solely as a courtesy. If you are the author of 
-           a resource listed here and you wish us to remove it, please <a class="link__primary" href="/contact">
-           contact us</a>. If you are the author of software that you wish to be listed, 
-           please <a class="link__primary" href="/contact">contact us</a>.
-        </p>
-        <ul>
-        <li><a href="https://github.com/mbjones/ezid" class="ext-link">Java code library</a></li>
-        <li><a href="https://github.com/psu-stewardship/hydra-ezid" class="ext-link">
-           EZID services for Hydra</a> applications</li>
-        <li><a href="https://github.com/wadechristie/WSULibs.EZID" class="ext-link">
-           C# Library for working with the EZID API</a></li>
-        <li><a href="https://wiki.duraspace.org/display/DSDOC4x/DOI+Digital+Object+Identifier#DOIDigitalObjectIdentifier-ConfigureDSpacetouseEZIDserviceforregistrationofDOIs" class="ext-link">Using EZID with DSpace</a></li>
-        <li><a href="https://rubygems.org/gems/ezid-client" class="ext-link">Ruby client for 
-           EZID</a></li>
-        <li><a href="https://github.com/duke-libraries/ezid-client/releases/tag/v0.12.0" 
-           class="ext-link">Another Ruby client for EZID</a></li>
-        <li>eScholarship Extensions to OJS CrossRef Export Plugin</li>
-        <ul>
-          <li><a href="https://github.com/cdlib/eschol-ojs/tree/eschol_prod/plugins/importexport/crossref" 
-            class="ext-link">CrossRef</a></li>
-          <li><a href="https://github.com/cdlib/eschol-ojs/blob/eschol_prod/pages/editor/IssueManagementHandler.inc.php" 
-            class="ext-link">IssueManagementHandler</a></li>
-        </ul>
-        <li>Virginia Tech's <a href="https://github.com/VTUL/EzidDOI" class="ext-link">plug-in 
-          for assigning and registering DOIs with EZID for OJS articles and issues</a></li>
-        <li><a href="https://github.com/ksclarke/islandora_ark" class="ext-link">An Archival 
-          Resource Key (ARK) management interface (using EZID) for Islandora/Drupal</a></li>
-
-
-<!-- ************************************************** -->
-<!-- ***** Please do not modify this next section ***** -->
-<!-- ************************************************** -->
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- ************************************************** -->
-<!-- ******* Please do not modify section above ******* -->
-<!-- ************************************************** -->
-
-
-
+  <p><a class="link__primary" href="/learn/open_source">Open Source Software for EZID</a></p>
   <p><a class="link__primary" href="/learn/suffix_passthrough">Suffix Passthrough Explained</a></p>
 
-  <h4>Status Information</h4>
+  <h2 class="heading_2">Status Information</h2>
 
   <p>For information about the status of the EZID system, please consider the following options:</p>
 

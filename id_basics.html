@@ -3,12 +3,12 @@
 {% load menus %}
 {% load i18n %}
 
-{% block title %}ID Basics{% endblock %}
-{% block heading %}{% content_heading _("ID Basics") %}{% endblock %}
+{% block title %}Identifier Basics{% endblock %}
+{% block heading %}{% content_heading _("Identifier Basics") %}{% endblock %}
 {% block content %}
 
 {% comment %}Don't need to translate this{% endcomment %}
-{% learn_breadcrumb _("ID Basics") 'FAQ' '#05' %}
+{% learn_breadcrumb _("Identifier Basics") 'FAQ' '#05' %}
 <div class="vertical-buffer-20"></div>
 <div class="container">
 {% comment %}Translators: Copy HTML tags over and only translate words outside of these tags 
@@ -16,10 +16,13 @@ i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS</p>
 i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a> 
 {% endcomment %}
 {% blocktrans trimmed %}
-<p><strong>EZID Default Account Setup</strong></p>
+<h2 class="heading_2">EZID Default Account Setup</h2>
 <p>Lorem ipsum dolor sit amet, offendit vivendum volutpat ad sea. Per tale dicta an. Agam delenit abhorreant mel te, oratio aeterno definitionem vim ei, ea malorum maiestatis deterruisset eos. Pro eu quem oblique detracto.</p>
 
 <p>No sanctus scaevola definitionem vim. Vis justo quaestio ne, ne qui quod erroribus. Eam animal legendos ex, adhuc mandamus recteque pri ne. Solum audiam accusata qui ea, perfecto inimicus est in. Mentitum iracundia torquatos cu est, periculis complectitur ex vis. Eos illud postea ut, erant facilisis appellantur est cu, mutat debet et ius.</p>
+
+<h3 class="heading_3">Looking for a deeper dive?</h3>
+For those of you who would like more technical information, you will find it here: <a class="link__primary" href="/learn/id_concepts">Identifier Concepts</a> and Practices.
 {% endblocktrans %}
 </div>
 {% endblock %}
