@@ -16,9 +16,91 @@ i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a>
 {% endcomment %}
 {% blocktrans trimmed %}
 <h2 class="heading_2">What is Suffix Passthrough?</h2>
-<p>Lorem ipsum dolor sit amet, offendit vivendum volutpat ad sea. Per tale dicta an. Agam delenit abhorreant mel te, oratio aeterno definitionem vim ei, ea malorum maiestatis deterruisset eos. Pro eu quem oblique detracto.</p>
 
-<p>No sanctus scaevola definitionem vim. Vis justo quaestio ne, ne qui quod erroribus. Eam animal legendos ex, adhuc mandamus recteque pri ne. Solum audiam accusata qui ea, perfecto inimicus est in. Mentitum iracundia torquatos cu est, periculis complectitur ex vis. Eos illud postea ut, erant facilisis appellantur est cu, mutat debet et ius.</p>
+<p><img alt="Illustration of suffix passing from the end of a submitted ARK to the end of a registered target URL." height="189" width="487" src="/download/attachments/171213829/spt_in_action.gif?version=1&amp;modificationDate=1430960812000&amp;api=v2" data-image-src="/download/attachments/171213829/spt_in_action.gif?version=1&amp;modificationDate=1430960812000&amp;api=v2" data-unresolved-comment-count="0" data-linked-resource-id="173539626" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="spt_in_action.gif" data-base-url="https://wiki.ucop.edu" data-linked-resource-content-type="image/gif" data-linked-resource-container-id="171213829" data-linked-resource-container-version="14">
+</p>
+
+<p>Suffix Passthrough (SPT) is a feature that lets you add any suffix to an identifier, and when a user selects (&quot;clicks on&quot;) the identifier, the suffix is added to the end of the identifier's location (target) URL.  It dramatically reduces the maintenance burden by permitting one identifier to stand in for many identifiers.</p>
+
+<p>The transformation of an identifier into its final location URL is done by a web server called a <em>resolver</em>, and the transformation is called <em>resolution</em>. Typically a web browser uses the resolver to find the final location URL, which it then displays in its location bar. Currently SPT works only for ARK identifiers and only with the <a href="http://n2t.net/" class="external-link" rel="nofollow"><span style="color: blue;">Name-to-Thing (N2T)</span></a> resolver.</p>
+
+<p>Basically, Suffix Passthrough makes every ARK the root of its own &quot;namespace&quot;. Any user-added suffix, which is a common way to form sub-object identifiers, will be passed through to the registered target object.  For example, a dataset with 10,000 component parts and just this one &quot;ancestor&quot; ARK,</p>
+
+<pre class="literal-block">http://n2t.net/ark:/12345/x98765</pre>
+
+<p>would effectively allow access to 10,000 ARKs, but only require you to manage the ancestor ARK. Those sub-object ARKs might look like:</p>
+
+<pre class="literal-block">
+http://n2t.net/ark:/12345/x98765/study1/location1/day1.cs
+http://n2t.net/ark:/12345/x98765/study1/location3/day19.cs
+ ...
+http://n2t.net/ark:/12345/x98765/study92/location18/day96.xlsx</pre>
+
+<p>When a user clicks on one, it is submitted to N2T. Failing to find it registered, N2T scans backwards starting from the end of the user-supplied ARK string and stops at the first ancestor ARK that is registered.</p>
+
+<p>The part that was scanned over, stretching from the first registered ancestor ARK to the end of the original string, comprises the suffix.</p>
+
+<pre class="literal-block">
+http://n2t.net/ark:/12345/x98765<span style="color: red;">/study92/location18/day96.xlsx</span>
+______________________________<em>/\</em>____________________________/</pre>
+          ancestor ARK                      <span style="color: red;">suffix</span>
+</pre>
+
+<p>Then it redirects the user's browser to the ancestor's target URL, appending the suffix that it scanned. So if the ancestor ARK's target was,</p>
+
+<pre class="literal-block">
+http://n2t.net/ark:/12345/x98765  --&gt;  <span style="color: blue;">http://datazoo.example.com/carbon288</span>
+\______________________________<em>/     \_</em>_________________________________/</code>
+       ancestor ARK                          <span style="color: blue;">ancestor ARK's target URL</span>
+</pre>
+
+<p>the user would be (hypothetically) redirected to</p>
+
+<pre class="literal-block"><span style="color: blue;">http://datazoo.example.com/carbon288</span><span style="color: red;">/study92/location18/day96.xlsx</span>
+<span style="font-family: Arial , sans-serif;">\</span>__________________________________<em>/\</em>____________________________/</pre>
+       <span style="color: blue;">ancestor's target URL</span>                    <span style="color: red;">suffix</span></pre>
+
+<p>Note that SPT is only useful when the target server can respond to the suffixes it receives. For example, you would not instruct users how to add suffixes to the above ARK unless the target server was prepared to provide access to its 10,000 sub-objects. Fortunately, SPT is easy to illustrate in some cases, such as when the target server extends resource names with query strings or ordinary URL paths.</p>
+
+<pre class="literal-block">
+<strong><em>Rule: if identifier A has target <span style="color: blue;">T</span>, suffix passthrough means the extended identifier A/<span style="color: red;">X</span> has target<span style="color: blue;">T</span>/<span style="color: red;">X</span></em></strong>.</pre>
+
+
+<p>Using more words, for an identifier A stored in N2T that has the target URL T, if you add a suffix X to A and resolve (eg, click on) the URL A/X, you will be redirected to the URL T/X.</p>
+
+<p>Some limitations and exceptions apply. For example, during the backwards scan, potential ancestor ARKs are tested (to see if they are registered) only at each &quot;word&quot; boundary, where a word here means a string of letters and digits. Also, scanning stops when the NAAN (the 5-digit number after the &quot;ark:/&quot;) is reached.</p>
+
+<h2 class="heading_2">Suffix Passthrough Examples</h2>
+
+<p>You can see SPT in action by clicking on the extended ARKs below. These are &quot;ARKs&quot; (for illustration purposes only, not long-term stable) that <em>
+are not</em> registered in the <a href="http://n2t.net" class="external-link" rel="nofollow"><span style="color: blue;">N2T</span></a> resolver, but are formed by adding a <span style="color: red;">suffix</span> to an ARK that <em>is</em> registered.</p>
+
+<p>Example 1. One registration standing in for several CDL service page &quot;ARKs&quot;.</p>
+<ul>
+  <li>Registered: ark:/12345/fk1234</li>
+  <li>Its target URL: <a href="http://www.cdlib.org/services" class="external-link" rel="nofollow"><span style="color: blue;">http://www.cdlib.org/services</span></a></li>
+  <li>An extended ARK: <a href="http://n2t.net/ark:/12345/fk1234/uc3/ezid/" class="external-link" rel="nofollow"><span style="color: blue;">http://n2t.net/ark:/12345/fk1234</span><span style="color: red;">/uc3/ezid/</span></a></li>
+</ul>
+
+<p>Example 2. One registration standing in for any number of Wikipedia article &quot;ARKs&quot;.</p>
+<ul>
+  <li>Registered: ark:/12345/fk1235</li>
+  <li>Its target URL: <a href="http://en.wikipedia.org/wiki" class="external-link" rel="nofollow"><span style="color: blue;">http://en.wikipedia.org/wiki</span></a></li>
+  <li>An extended ARK: <a href="http://n2t.net/ark:/12345/fk1235/Persistent_identifier" class="external-link" rel="nofollow"><span style="color: blue;">http://n2t.net/ark:/12345/fk1235</span><span style="color: red;">/Persistent_identifier</span></a></li>
+</ul>
+
+<p>Example 3. One registration standing in for any number of internet search &quot;ARKs&quot;.</p>
+<ul>
+  <li>Registered: ark:/12345/fk3</li>
+  <li>Its target URL: <a href="http://www.google.com/#q=" class="external-link" rel="nofollow"><span style="color: blue;">http://www.google.com/#q=</span></a></li>
+  <li>Extended ARK: <a href="http://n2t.net/ark:/12345/fk3pqrst" class="external-link" rel="nofollow"><span style="color: blue;">http://n2t.net/ark:/12345/fk3</span><span style="color: red;">pqrst</span></a></li>
+</ul>
+
+<p>You can experiment easily by pasting this registered ARK,</p>
+
+<pre class="literal-block">http://n2t.net/ark:/12345/fk3</pre>
+
+<p>into your browser's location field and appending (no spaces) a &quot;search term&quot; suffix of your choice.</p>
 {% endblocktrans %}
 </div>
 {% endblock %}
