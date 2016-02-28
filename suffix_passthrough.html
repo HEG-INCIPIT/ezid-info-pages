@@ -17,16 +17,17 @@ i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a>
 {% blocktrans trimmed %}
 <h2 class="heading_2">What is Suffix Passthrough?</h2>
 
-<p><img alt="Illustration of suffix passing from the end of a submitted ARK to the end of a registered target URL." height="189" width="487" src="/download/attachments/171213829/spt_in_action.gif?version=1&amp;modificationDate=1430960812000&amp;api=v2" data-image-src="/download/attachments/171213829/spt_in_action.gif?version=1&amp;modificationDate=1430960812000&amp;api=v2" data-unresolved-comment-count="0" data-linked-resource-id="173539626" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="spt_in_action.gif" data-base-url="https://wiki.ucop.edu" data-linked-resource-content-type="image/gif" data-linked-resource-container-id="171213829" data-linked-resource-container-version="14">
-</p>
+<p class="diagram__img-wrapper"><img class="diagram__img" alt="Illustration of suffix passing from the end of a submitted ARK to the end of a registered target URL." src="/static/images/learn_spt_in_action.gif"/></p>
 
-<p>Suffix Passthrough (SPT) is a feature that lets you add any suffix to an identifier, and when a user selects (&quot;clicks on&quot;) the identifier, the suffix is added to the end of the identifier's location (target) URL.  It dramatically reduces the maintenance burden by permitting one identifier to stand in for many identifiers.</p>
+<p><span style="white-space:nowrap">Suffix Passthrough (SPT)</span> is a feature that lets you add any suffix to an identifier, and when a user selects (&quot;clicks on&quot;) the identifier, the suffix is added to the end of the identifier's location (target) URL.  It dramatically reduces the maintenance burden by permitting one identifier to stand in for many identifiers.</p>
 
 <p>The transformation of an identifier into its final location URL is done by a web server called a <em>resolver</em>, and the transformation is called <em>resolution</em>. Typically a web browser uses the resolver to find the final location URL, which it then displays in its location bar. Currently SPT works only for ARK identifiers and only with the <a href="http://n2t.net/" class="external-link" rel="nofollow"><span style="color: blue;">Name-to-Thing (N2T)</span></a> resolver.</p>
 
 <p>Basically, Suffix Passthrough makes every ARK the root of its own &quot;namespace&quot;. Any user-added suffix, which is a common way to form sub-object identifiers, will be passed through to the registered target object.  For example, a dataset with 10,000 component parts and just this one &quot;ancestor&quot; ARK,</p>
 
-<pre class="literal-block">http://n2t.net/ark:/12345/x98765</pre>
+<pre class="literal-block">
+http://n2t.net/ark:/12345/x98765
+</pre>
 
 <p>would effectively allow access to 10,000 ARKs, but only require you to manage the ancestor ARK. Those sub-object ARKs might look like:</p>
 
@@ -34,7 +35,8 @@ i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a>
 http://n2t.net/ark:/12345/x98765/study1/location1/day1.cs
 http://n2t.net/ark:/12345/x98765/study1/location3/day19.cs
  ...
-http://n2t.net/ark:/12345/x98765/study92/location18/day96.xlsx</pre>
+http://n2t.net/ark:/12345/x98765/study92/location18/day96.xlsx
+</pre>
 
 <p>When a user clicks on one, it is submitted to N2T. Failing to find it registered, N2T scans backwards starting from the end of the user-supplied ARK string and stops at the first ancestor ARK that is registered.</p>
 
@@ -42,7 +44,7 @@ http://n2t.net/ark:/12345/x98765/study92/location18/day96.xlsx</pre>
 
 <pre class="literal-block">
 http://n2t.net/ark:/12345/x98765<span style="color: red;">/study92/location18/day96.xlsx</span>
-______________________________<em>/\</em>____________________________/</pre>
+______________________________<em>/\</em>____________________________/
           ancestor ARK                      <span style="color: red;">suffix</span>
 </pre>
 
@@ -57,7 +59,7 @@ http://n2t.net/ark:/12345/x98765  --&gt;  <span style="color: blue;">http://data
 <p>the user would be (hypothetically) redirected to</p>
 
 <pre class="literal-block"><span style="color: blue;">http://datazoo.example.com/carbon288</span><span style="color: red;">/study92/location18/day96.xlsx</span>
-<span style="font-family: Arial , sans-serif;">\</span>__________________________________<em>/\</em>____________________________/</pre>
+<span style="font-family: Arial , sans-serif;">\</span>__________________________________<em>/\</em>____________________________/
        <span style="color: blue;">ancestor's target URL</span>                    <span style="color: red;">suffix</span></pre>
 
 <p>Note that SPT is only useful when the target server can respond to the suffixes it receives. For example, you would not instruct users how to add suffixes to the above ARK unless the target server was prepared to provide access to its 10,000 sub-objects. Fortunately, SPT is easy to illustrate in some cases, such as when the target server extends resource names with query strings or ordinary URL paths.</p>
