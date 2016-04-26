@@ -3,7 +3,7 @@
 {% load menus %}
 {% load i18n %}
 
-{% block title %}{% trans "Suffix Passthrough Explained" %}{% endblock %}
+{% block title %}{% block title-twitter %}{% trans "Suffix Passthrough Explained" %}{% endblock %}{% endblock %}
 {% block heading %}{% content_heading _("Suffix Passthrough Explained") %}{% endblock %}
 {% block content %}
 

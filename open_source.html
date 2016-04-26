@@ -3,7 +3,7 @@
 {% load menus %}
 {% load i18n %}
 
-{% block title %}Open Source Software for EZID{% endblock %}
+{% block title %}{% block title-twitter %}{% trans "Open Source Software for EZID" %}{% endblock %}{% endblock %}
 {% block heading %}{% content_heading _("Open Source Software for EZID") %}{% endblock %}
 {% block content %}
 

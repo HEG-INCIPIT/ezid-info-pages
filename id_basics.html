@@ -3,7 +3,7 @@
 {% load menus %}
 {% load i18n %}
 
-{% block title %}Identifier Basics{% endblock %}
+{% block title %}{% block title-twitter %}{% trans "Identifier Basics" %}{% endblock %}{% endblock %}
 {% block heading %}{% content_heading _("Identifier Basics") %}{% endblock %}
 {% block content %}
 

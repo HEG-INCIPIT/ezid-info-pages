@@ -2,7 +2,7 @@
 {% load layout_extras %}
 {% load i18n %}
 
-{% block title %}{% trans "About EZID" %}{% endblock %}
+{% block title %}{% block title-twitter %}{% trans "About EZID" %}{% endblock %}{% endblock %}
 {% block heading %}{% content_heading _("About Us") %}{% endblock %}
 {% block content %}
 <div class="container vertical-buffer-xs">

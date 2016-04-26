@@ -3,7 +3,7 @@
 {% load menus %}
 {% load i18n %}
 
-{% block title %}{%trans "Identifier Concepts and Practices at the California Digital Library" %}{% endblock %}
+{% block title %}{% block title-twitter %}{% trans "Identifier Concepts and Practices at the California Digital Library" %}{% endblock %}{% endblock %}
 {% block heading %}{% content_heading _("Identifier Concepts and Practices at the California Digital Library") %}{% endblock %}
 {% block content %}
 

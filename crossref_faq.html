@@ -3,8 +3,7 @@
 {% load menus %}
 {% load i18n %}
 
-{% comment %}Don't need to translate this{% endcomment %}
-{% block title %}CrossRef FAQ{% endblock %}
+{% block title %}{% block title-twitter %}{% trans "CrossRef FAQ" %}{% endblock %}{% endblock %}
 {% block heading %}{% content_heading _("CrossRef: Frequently Asked Questions") %}{% endblock %}
 {% block content %}
 
