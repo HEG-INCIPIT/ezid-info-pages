@@ -9,7 +9,7 @@
 
 {% comment %}Don't need to translate this{% endcomment %}
 {% learn_breadcrumb _("Identifier Concepts") 'FAQ' '#05' %}
-<div class="container">
+<div class="container api">
 {% comment %}Translators: Copy HTML tags over and only translate words outside of these tags 
 i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS</p> 
 i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a> 
@@ -131,12 +131,10 @@ i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a>
 
 <p>One useful check character convention, called &quot;Noid1&quot;, uses exactly one check character that appears at the tip of the blade, in other words, as the last character of the base identifier.  It also uses the Noid1 algorithm ( <a href="https://confluence.ucop.edu/display/Curation/NOID" class="ext-link">https://confluence.ucop.edu/display/Curation/NOID</a> ), which guarantees the base identifier against the most common transcription errors: transposition of two adjacent characters and single character errors.  Noid1 does not protect either the hostname or any extensions.  For example, in the identifier,</p>
 
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-                                    ,------------,
-     http://OwlBike.example.org/hdl:13030/tqb3kh8w/chap3/fig5.jpg
-</pre>
-</div></div>
+<div class="pre-block">
+<code>                                    ,------------,</code><br/>
+<code>     http://OwlBike.example.org/hdl:13030/tqb3kh8w/chap3/fig5.jpg</code><br/>
+</div>
 
 <p>the protected string, &quot;13030/tqb3kh8w&quot;, ends with a &quot;w&quot; that is (hypothetically) the computed Noid1 check character.  Also, all Noid1 examples use a restricted character repertoire consisting of digits and lowercase letters minus vowels and minus the letter 'l' (ell).  The Noid software uses this repertoire to reduce the chance of &quot;accidental&quot; semantics in generated identifiers and to avoid some of the confusion that arises over mistaking digits for letters, such as '1' for 'l' and '0' for 'O'.</p>
 
