@@ -46,7 +46,7 @@
 i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS. PLEASE PRESERVE HTML TAGS</p> 
 {% endcomment %}
 {% blocktrans trimmed %}
-<div id="choose_id_demo_content" class="help_window">
+<div id="choose_id_demo_content" class="help_window" role="tooltip">
   <p>
     <strong>DOIs</strong> <br/>Recommended for final products, published materials, and citation. Use for objects under good long-term management.
   </p>
@@ -54,7 +54,7 @@ i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS. PLEASE PRESERVE HTML TAGS</p>
     <strong>ARKs</strong> <br/>Recommended for projects requiring more flexibility, early or unpublished versions of material.
   </p>
 </div>
-<div id="choose_id_content" class="help_window">
+<div id="choose_id_content" class="help_window" role="tooltip">
   <p>
     <strong>DOIs</strong> <br/>Recommended for final products, published materials, and citation. Use for objects under good long-term management. Cannot be deleted.
   </p>
@@ -62,13 +62,13 @@ i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS. PLEASE PRESERVE HTML TAGS</p>
     <strong>ARKs</strong> <br/>Recommended for projects requiring more flexibility, early or unpublished versions of material. Can be deleted.
   </p>
 </div>
- <div id="custom_remainder_content" class="help_window">
+ <div id="custom_remainder_content" class="help_window" role="tooltip">
   <p>
     EZID will create a unique string for you. If you choose to create a custom remainder, best practice is to not include information that is subject to change, which impairs persistence. Please check <a class="link__primary" target="_blank" title="PDF Document" href="http://ias-ezid-dev.cdlib.org/static/locale/en/EZID_CustomRemainders.pdf">Custom Remainder Rules</a> for permitted characters.
   </p>
 </div>
 
-<div id="describe_profile_content" class="help_window">
+<div id="describe_profile_content" class="help_window" role="tooltip">
   <p>
     <strong>DataCite</strong> <br/>Required for DOIs. More here: <a href="http://schema.datacite.org" class="ext-link no-wrap">http://schema.datacite.org</a>
   </p>
@@ -80,22 +80,22 @@ i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS. PLEASE PRESERVE HTML TAGS</p>
   </p>
 </div>
 
-<div id="decide_public_content" class="help_window">
+<div id="decide_public_content" class="help_window" role="tooltip">
   <p>
     A <strong>public</strong> status means the identifier is viewable by anyone. The <strong>reserved</strong> status means it is viewable only by owners, so “reserved” is a great way to save a DOI or ARK for use later. Reserved IDs can be deleted.
   </p>
 </div>
-<div id="decide_public_unavail_content" class="help_window">
+<div id="decide_public_unavail_content" class="help_window" role="tooltip">
   <p>
     A <strong>public</strong> status means the identifier is viewable by anyone. An identifier with <strong>unavailable</strong> status is also public, but only insofar as it redirects to an EZID-provided "tombstone" page, displaying the identifier's citation metadata and the reason for the object's unavailability.
   </p>
 </div>
-<div id="decide_export_content" class="help_window">
+<div id="decide_export_content" class="help_window" role="tooltip">
   <p>
     Your choice pertains to making the metadata available for harvesting and/or indexing. Choosing "Yes" does not guarantee that the metadata will be harvested or indexed, but choosing "No" removes the possibility.
   </p>
 </div>
-<div id="lookup_proxies_content" class="help_window">
+<div id="lookup_proxies_content" class="help_window" role="tooltip">
   <p>
     <strong>About Proxy Users</strong> <br/>An EZID user account may designate another EZID user account as a proxy user of the first account's identifiers. This gives the second EZID user account the right to manage and edit detailed information about an identifier.
   </p>
