@@ -7,16 +7,16 @@
 {% block heading %}{% content_heading _("About Us") %}{% endblock %}
 {% block content %}
 <div class="container vertical-buffer-xs">
-
+  <!--
   {% host_based_include "info/localized/_/about_us_include.html" %}
-
+  -->
 <p>&nbsp;</p>
 {% comment %}Translators: Copy HTML tags over and only translate words outside of these tags 
 i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS</p> 
 i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a> 
 {% endcomment %}
 {% blocktrans trimmed %}
-	<h2 class="heading_2">About EZID</h2>
+<!-- <h2 class="heading_2">About EZID</h2>
 
 <p>
 	EZID is a service conceived, built, and maintained by the	
@@ -55,7 +55,7 @@ i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a>
         <a href="http://www.datacite.org/" class="ext-link">DataCite</a> 
         consortium, which is dedicated to providing the social and technical 
         infrastructure that will enable data sharing and publication. 
-</p>
+</p>-->
 {% endblocktrans %}
 
 </div>
