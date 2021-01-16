@@ -2,61 +2,65 @@
 {% load layout_extras %}
 {% load i18n %}
 
-{% block title %}{% block title-twitter %}{% trans "About Us" %}{% endblock %}{% endblock %}
-{% block description %}{%trans "Learn about EZID's history and the team members who make EZID possible." %}{% endblock %}
+{% block title %}{% block title-twitter %}{% trans "About ARKetype" %}{% endblock %}{% endblock %}
 {% block heading %}{% autoescape off %}{% content_heading _("About Us") %}{% endautoescape %}{% endblock %}
 {% block content %}
 <div class="container vertical-buffer-xs">
-   <!--
-  {% host_based_include "info/localized/_/about_us_include.html" %}
-  -->
-   <p>&nbsp;</p>
-   {% comment %}Translators: Copy HTML tags over and only translate words outside of these tags
-   i.e.: <p>TRANSLATE TEXT WRAPPED BY HTML TAGS</p>
-   i.e.: <a href="don't_translate_urls">PLEASE PRESERVE HTML TAGS</a>
-   {% endcomment %}
-   {% blocktrans trimmed %}
-   <!-- <h2 class="heading_2">About EZID</h2>
-
-<p>
-	EZID is a service conceived, built, and maintained by the
-        <a href="http://www.cdlib.org/" class="ext-link">California Digital Library</a>
-        (CDL). CDL
-	was founded by the University of California in 1997 to take
-	advantage of emerging technologies that were transforming
-	the way digital information was being published and
-	accessed. CDL's diverse and talented staff has assembled
-	one of the world's largest digital research libraries and
-	has changed the ways that faculty, students, and researchers
-	discover and access information.
-</p>
-
-<p>
-	CDL has relationships with a wide range of
-	researchers across the University, including natural history
-	museums, research groups, individual scientists, and faculty
-	members on all 10 UC campuses. CDL staff members bring a
-	unique blend of experience to this multi-disciplinary
-	venture.  CDL staff members have formal training in science,
-	mathematics, the humanities, and information science, as
-	well as deep professional experience in the creation of
-	software, services, and funded proposals.
-</p>
-
-
-<p>
-	CDL has	extensive contacts with scientists, within the University of
-	California and beyond via projects funded by the Library of
-	Congress, National Science Foundation, National Institutes
-	of Health (pending) and the Gordon and Betty Moore
-	Foundation.  More information about CDL's
-        <a href="http://www.cdlib.org/about/grants.html" class="ext-link">grants and partnerships</a>
-        is available. Finally, CDL is a founding member of the international
-        <a href="http://www.datacite.org/" class="ext-link">DataCite</a>
-        consortium, which is dedicated to providing the social and technical
-        infrastructure that will enable data sharing and publication.
-</p>-->
-   {% endblocktrans %}
-
+   <div>
+      <p class="h3 text-primary">Our service</p>
+      <p>ARKetype is an Archival Resource Key (ARK) allocation service managed by
+         the Haute école de gestion de Genève which was initiated thanks to the
+         funding from
+         <a href="https://www.swissuniversities.ch/">swissuniversities</a>.
+      </p>
+      <p>We aim to facilitate the creation and management of long-term and unique
+         identifiers that can be assigned to anything digital, physical, or abstract.
+      </p>
+      <p>hrough ARKetype, organisations are able to create identifiers with a very
+         fine level of granularity that can reflect complex object hierarchies as
+         well as being able to retain traceability, versioning, or even information
+         on the object's persistence or unavaibility through the
+         <a href="https://n2t.net/e/ark_ids.html">inflection functionality</a>.
+      </p>
+      <p>We provide a user interface and an application programming interface (API)
+          for assigning ARK identifiers to resources. Any kind of metadata schemas
+          can be associated with ARKs and for the moment we currently support three
+          types of profiles (Electronic Resource Citation, Dublin Core, DataCite).
+          Try the <a href="/demo/advanced">Advanced Demo Identifier</a> to see how
+          it works.
+      </p>
+   </div>
+   <div>
+      <p class="h3 text-primary">Our team</p>
+      <ul>
+         <li>Arnaud Gaudinat</li>
+         <li>René Schneider</li>
+         <li>Amir Alwash</li>
+         <li>David Nogueiras Blanco </li>
+         <li>Stéphane Jermini</li>
+      </ul>
+   </div>
+   <div>
+      <p class="h3 text-primary">Our pricing</p>
+      <p>We currently offer one pricing level:
+         <b>CHF 1'000 per year for the creation and maintenance of an unlimited
+            number of identifiers</b>.
+      </p>
+      <p>If you're interested or have any questions, please
+         <a href="/contact">contact</a> us.
+      </p>
+   </div>
+   <div>
+      <p class="h3 text-primary">ARK FAQ</p>
+      <p>Here are two great FAQ pages about the ARK identifier:</p>
+      <ul>
+         <li><a href="https://wiki.lyrasis.org/display/ARKs/ARK+Identifiers+FAQ">
+            in English</a>
+         </li>
+         <li><a href="https://wiki.lyrasis.org/pages/viewpage.action?pageId=178880619">
+            in French</a>
+         </li>
+      </ul>
+   </div>
 </div>
 {% endblock %}
